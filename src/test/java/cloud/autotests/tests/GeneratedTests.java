@@ -5,10 +5,13 @@ import io.qameta.allure.Description;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import static com.codeborne.selenide.Selenide.open;
-import static com.codeborne.selenide.Selenide.title;
+import java.time.Duration;
+
+import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 import static io.qameta.allure.Allure.step;
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
 public class GeneratedTests extends TestBase {
@@ -17,23 +20,35 @@ public class GeneratedTests extends TestBase {
     @DisplayName("Login to account")
     void generatedTest() {
         step("Open 'https://trade.mangotrade.com/en/login'", () -> {
-            step("// todo: just add selenium action");
+            step("// todo: just add selenium action", () -> {
+                open("/en/login");
+            });
         });
 
         step("Set email 'mnn'", () -> {
-            step("// todo: just add selenium action");
+            step("// todo: just add selenium action", () -> {
+                $("[data-test-id=login-email-input]").setValue("mnenie@bk.ru");
+            });
         });
 
         step("Set password 'Test123'", () -> {
-            step("// todo: just add selenium action");
+            step("// todo: just add selenium action", () -> {
+                $("[data-test-id=login-password-input]").setValue("Test1234");
+            });
         });
 
         step("Click button \"Log in\"", () -> {
-            step("// todo: just add selenium action");
+            step("// todo: just add selenium action", () -> {
+                $("[data-test-id=login-submit-button]").click();
+
+            });
         });
 
         step("Redirect to 'https://trade.mangotrade.com/traderoom'", () -> {
-            step("// todo: just add selenium action");
+            step("// todo: just add selenium action", () -> {
+                String currURL = getWebDriver().getCurrentUrl();
+                assertEquals("https://trade.mangotrade.com/traderoom", currURL);
+            });
         });
     }
 
