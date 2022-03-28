@@ -25,19 +25,19 @@ public class GeneratedTests extends TestBase {
             });
         });
 
-     /*   step("Set email 'mnn'", () -> {
+        step("Set email 'mnn'", () -> {
             step("// todo: just add selenium action", () -> {
-                $("[data-test-id=login-email-input]").click();
-                $("[data-test-id=login-email-input]").setValue("mnenie@bk.ru");
+               // $("[data-test-id=login-email-input]").setValue("mnenie@bk.ru");
+                $("[name=identifier]").setValue("mnenie@bk.ru");
             });
         });
 
         step("Set password 'Test123'", () -> {
             step("// todo: just add selenium action", () -> {
-                $("[data-test-id=login-password-input]").click();
-                $("[data-test-id=login-password-input]").setValue("Test1234");
+                //$("[data-test-id=login-password-input]").setValue("Test1234");
+                $("[name=password]").setValue("Test1234");
             });
-        });*/
+        });
 
         step("Click button \"Log in\"", () -> {
             step("// todo: just add selenium action", () -> {
