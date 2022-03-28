@@ -19,7 +19,7 @@ public class GeneratedTests extends TestBase {
     @Test
     @Description("Login test 1")
     @DisplayName("Success login to account")
-    void generatedTest() {
+    void succesLogin() {
         step("Open 'https://trade.mangotrade.com/en/login'", () -> {
             step("// todo: just add selenium action", () -> {
                 open("https://trade.mangotrade.com/en/login");
@@ -58,7 +58,7 @@ public class GeneratedTests extends TestBase {
     @Test
     @Description("Login test 2")
     @DisplayName("Failed login with null data")
-    void generatedTest() {
+    void failedLoginBothFieldsNull() {
         step("Open 'https://trade.mangotrade.com/en/login'", () -> {
                 open("https://trade.mangotrade.com/en/login");
         });
