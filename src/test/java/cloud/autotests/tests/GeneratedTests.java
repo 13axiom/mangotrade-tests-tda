@@ -163,7 +163,7 @@ public class GeneratedTests extends TestBase {
                 open("https://trade.mangotrade.com/en/login"));
 
         step("'Click button 'Sing Up'", () -> {
-            $("[data-test-id=header-register-button]").closest().click();
+            $("[data-test-id=header-register-button]").click();
         });
 
         step("Check redirect to registration form", () -> {
