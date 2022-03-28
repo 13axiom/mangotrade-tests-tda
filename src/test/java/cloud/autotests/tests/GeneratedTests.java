@@ -21,7 +21,7 @@ public class GeneratedTests extends TestBase {
     void generatedTest() {
         step("Open 'https://trade.mangotrade.com/en/login'", () -> {
             step("// todo: just add selenium action", () -> {
-                open("/en/login");
+                open("https://trade.mangotrade.com/en/login");
             });
         });
 

@@ -23,7 +23,7 @@ public class TestBase {
     static void setUp() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
         DriverSettings.configure();
-       //String remoteBrowserUser = System.getProperty("remote_browser_user");
+       /*//String remoteBrowserUser = System.getProperty("remote_browser_user");
        // String remoteBrowserPassword = System.getProperty("remote_browser_password");
 
         step("Настраиваем тестируемую страницу", () -> {
@@ -37,7 +37,7 @@ public class TestBase {
             capabilities.setCapability("enableVNC", true);
             capabilities.setCapability("enableVideo", true);
             Configuration.browserCapabilities = capabilities;
-        });
+        });*/
     }
 
 
