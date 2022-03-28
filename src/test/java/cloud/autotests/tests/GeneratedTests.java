@@ -27,12 +27,14 @@ public class GeneratedTests extends TestBase {
 
         step("Set email 'mnn'", () -> {
             step("// todo: just add selenium action", () -> {
+                $("[data-test-id=login-email-input]").click();
                 $("[data-test-id=login-email-input]").setValue("mnenie@bk.ru");
             });
         });
 
         step("Set password 'Test123'", () -> {
             step("// todo: just add selenium action", () -> {
+                $("[data-test-id=login-password-input]").click();
                 $("[data-test-id=login-password-input]").setValue("Test1234");
             });
         });
