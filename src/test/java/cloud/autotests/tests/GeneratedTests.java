@@ -70,10 +70,10 @@ public class GeneratedTests extends TestBase {
 
         step("Expected Results", () -> {
             step("Error message below field 'Email'", () -> {
-                $("[name=identifier]").$(".iqInput__error.active").shouldHave(text("Fill out the field"));
+                $("[data-test-id=login-email-input]").$(".iqInput__error.active").shouldHave(text("Fill out the field"));
             });
             step("Error message below field 'Password'", () -> {
-                $("[name=password]").$(".iqInput__error.active").shouldHave(text("Fill out the field"));
+                $("[data-test-id=login-password-input]").$(".iqInput__error.active").shouldHave(text("Fill out the field"));
             });
         });
     }
