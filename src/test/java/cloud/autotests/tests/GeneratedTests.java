@@ -121,7 +121,8 @@ public class GeneratedTests extends TestBase {
                 open("https://trade.mangotrade.com/en/login"));
 
         step("'Log in' page should have warning about risks", () -> {
-           $("[data-test-id=auth-warning-block]").scrollIntoView(true).shouldHave(exactText("All trading involves risk. Only risk capital you're prepared to lose"))
+           $("[data-test-id=auth-warning-block]").scrollIntoView(true).
+                   shouldHave(exactText("All trading involves risk. Only risk capital you're prepared to lose"));
         });
     }
 
