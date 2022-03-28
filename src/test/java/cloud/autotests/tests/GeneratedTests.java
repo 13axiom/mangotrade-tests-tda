@@ -17,6 +17,21 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
 public class GeneratedTests extends TestBase {
+
+    @Test
+    @Description("Login test 5")
+    @DisplayName("Login form has form header 'Log In'")
+    void checkLoginFormHeader() {
+        step("Open url 'https://trade.mangotrade.com/en/login'", () ->
+                open("https://trade.mangotrade.com/en/login"));
+
+        step("Check login header form", () -> {
+            step("Check form header -> should be 'Log In'", () -> {
+                $(".css-1ffs9d1.e131aulr0").shouldHave(exactText("Log In"));
+            });
+        });
+    }
+
     @Test
     @Description("Login test 1")
     @DisplayName("Success login to account")
@@ -51,7 +66,6 @@ public class GeneratedTests extends TestBase {
         step("Open 'https://trade.mangotrade.com/en/login'", () -> {
                 open("https://trade.mangotrade.com/en/login");
         });
-
 
         step("Click button \"Log in\"", () -> {
                 $("[data-test-id=login-submit-button]").click();
@@ -122,7 +136,7 @@ public class GeneratedTests extends TestBase {
 
         step("'Log in' page should have warning about risks", () -> {
            $("[data-test-id=auth-warning-block]").scrollIntoView(true).
-                   shouldHave(exactText("All trading involves risk. Only risk capital you're prepared to lose"));
+                   shouldHave(exactText("All trading involves risk. Only risk capital you're prepared to lose."));
         });
     }
 
@@ -138,6 +152,29 @@ public class GeneratedTests extends TestBase {
             String errorText = "SEVERE";
 
             assertThat(consoleLogs).doesNotContain(errorText);
+        });
+    }
+
+    @Test
+    @Description("Simple test 3")
+    @DisplayName("Successful redirect to registration form")
+    void successRedirectToRegistrationForm() {
+        step("Open url 'https://trade.mangotrade.com/en/login'", () ->
+                open("https://trade.mangotrade.com/en/login"));
+
+        step("'Click button 'Sing Up'", () -> {
+            $("[data-test-id=header-register-button]").click();
+        });
+
+        step("Check redirect to registration form", () -> {
+            step("Check link", () -> {
+                String currURL = getWebDriver().getCurrentUrl();
+            assertEquals("https://trade.mangotrade.com/en/register", currURL);
+            });
+
+            step("Check form header -> should be 'Sing Up'", () -> {
+               $(".RegisterFormContainer").shouldHave(exactText("Sing Up"));
+            });
         });
     }
 }
