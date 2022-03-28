@@ -21,37 +21,25 @@ public class GeneratedTests extends TestBase {
     @DisplayName("Success login to account")
     void succesLogin() {
         step("Open 'https://trade.mangotrade.com/en/login'", () -> {
-            step("// todo: just add selenium action", () -> {
                 open("https://trade.mangotrade.com/en/login");
-            });
         });
 
         step("Set email 'mnn'", () -> {
-            step("// todo: just add selenium action", () -> {
-                // $("[data-test-id=login-email-input]").setValue("mnenie@bk.ru");
                 $("[name=identifier]").setValue("mnenie@bk.ru");
-            });
         });
 
         step("Set password 'Test123'", () -> {
-            step("// todo: just add selenium action", () -> {
-                //$("[data-test-id=login-password-input]").setValue("Test1234");
                 $("[name=password]").setValue("Test1234");
-            });
         });
 
         step("Click button \"Log in\"", () -> {
-            step("// todo: just add selenium action", () -> {
                 $("[data-test-id=login-submit-button]").click();
                 sleep(5000);
-            });
         });
 
         step("Redirect to 'https://trade.mangotrade.com/traderoom'", () -> {
-            step("// todo: just add selenium action", () -> {
                 String currURL = getWebDriver().getCurrentUrl();
                 assertEquals("https://trade.mangotrade.com/traderoom", currURL);
-            });
         });
     }
 
@@ -73,7 +61,53 @@ public class GeneratedTests extends TestBase {
                 $("[data-test-id=login-email-input]").$(".iqInput__error.active").shouldHave(text("Fill out the field"));
             });
             step("Error message below field 'Password'", () -> {
-                $("[data-test-id=login-password-input]").$(".iqInput__error.active").shouldHave(text("Fill out the f1ield"));
+                $("[data-test-id=login-password-input]").$(".iqInput__error.active").shouldHave(text("Fill out the field"));
+            });
+        });
+    }
+
+    @Test
+    @Description("Login test 3")
+    @DisplayName("Failed login without password")
+    void failedLoginBothFieldsNull() {
+        step("Open 'https://trade.mangotrade.com/en/login'", () -> {
+            open("https://trade.mangotrade.com/en/login");
+        });
+
+        step("Set email 'mnn'", () -> {
+                $("[name=identifier]").setValue("mnenie@bk.ru");
+        });
+
+        step("Click button \"Log in\"", () -> {
+            $("[data-test-id=login-submit-button]").click();
+        });
+
+        step("Expected Results", () -> {
+            step("Error message below field 'Password'", () -> {
+                $("[data-test-id=login-password-input]").$(".iqInput__error.active").shouldHave(text("Fill out the field"));
+            });
+        });
+    }
+
+    @Test
+    @Description("Login test 4")
+    @DisplayName("Failed login without Email")
+    void failedLoginBothFieldsNull() {
+        step("Open 'https://trade.mangotrade.com/en/login'", () -> {
+            open("https://trade.mangotrade.com/en/login");
+        });
+
+        step("Set password 'Test123'", () -> {
+                $("[name=password]").setValue("Test1234");
+        });
+
+        step("Click button \"Log in\"", () -> {
+            $("[data-test-id=login-submit-button]").click();
+        });
+
+        step("Expected Results", () -> {
+            step("Error message below field 'Email'", () -> {
+                $("[data-test-id=login-email-input]").$(".iqInput__error.active").shouldHave(text("Fill out the field"));
             });
         });
     }
