@@ -174,7 +174,7 @@ public class GeneratedTests extends TestBase {
             });
 
             step("Check form header -> should be 'Sing Up'", () -> {
-               $(".RegisterFormContainer").$("h1").shouldHave(text("Sing Up"));
+               $(".RegisterFormContainer").$("h1").shouldHave(exactText("Sign Up"));
             });
         });
     }
