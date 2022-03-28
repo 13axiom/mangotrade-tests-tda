@@ -164,6 +164,7 @@ public class GeneratedTests extends TestBase {
 
         step("'Click button 'Sing Up'", () -> {
             $("[data-test-id=header-register-button]").click();
+            sleep(5000);
         });
 
         step("Check redirect to registration form", () -> {
