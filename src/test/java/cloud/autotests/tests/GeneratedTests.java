@@ -61,7 +61,7 @@ public class GeneratedTests extends TestBase {
                 $("[data-test-id=login-email-input]").$(".iqInput__error.active").shouldHave(text("Fill out the field"));
             });
             step("Error message below field 'Password'", () -> {
-                $("[data-test-id=login-password-input]").$(".iqInput__error.active").shouldHave(text("Fill out the field"));
+                $("[data-test-id=login-password-input]").$(".iqInput__error.active").shouldHave(text("Fill out the f1ield"));
             });
         });
     }
@@ -69,7 +69,7 @@ public class GeneratedTests extends TestBase {
     @Test
     @Description("Login test 3")
     @DisplayName("Failed login without password")
-    void failedLoginBothFieldsNull() {
+    void failedLoginNullPassword() {
         step("Open 'https://trade.mangotrade.com/en/login'", () -> {
             open("https://trade.mangotrade.com/en/login");
         });
@@ -92,7 +92,7 @@ public class GeneratedTests extends TestBase {
     @Test
     @Description("Login test 4")
     @DisplayName("Failed login without Email")
-    void failedLoginBothFieldsNull() {
+    void failedLoginNullEmail() {
         step("Open 'https://trade.mangotrade.com/en/login'", () -> {
             open("https://trade.mangotrade.com/en/login");
         });
