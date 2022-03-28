@@ -27,7 +27,7 @@ public class GeneratedTests extends TestBase {
 
         step("Set email 'mnn'", () -> {
             step("// todo: just add selenium action", () -> {
-               // $("[data-test-id=login-email-input]").setValue("mnenie@bk.ru");
+                // $("[data-test-id=login-email-input]").setValue("mnenie@bk.ru");
                 $("[name=identifier]").setValue("mnenie@bk.ru");
             });
         });
@@ -42,7 +42,7 @@ public class GeneratedTests extends TestBase {
         step("Click button \"Log in\"", () -> {
             step("// todo: just add selenium action", () -> {
                 $("[data-test-id=login-submit-button]").click();
-
+                sleep(5000);
             });
         });
 
@@ -59,7 +59,7 @@ public class GeneratedTests extends TestBase {
     @DisplayName("Page console log should not have errors")
     void consoleShouldNotHaveErrorsTest() {
         step("Open url 'https://trade.mangotrade.com/en/login'", () ->
-            open("https://trade.mangotrade.com/en/login"));
+                open("https://trade.mangotrade.com/en/login"));
 
         step("Console logs should not contain text 'SEVERE'", () -> {
             String consoleLogs = DriverUtils.getConsoleLogs();
