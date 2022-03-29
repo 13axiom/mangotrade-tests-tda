@@ -1,4 +1,4 @@
-package cloud.autotests.docs;
+package com.mangotrade.docs;
 
 import org.openqa.selenium.By;
 

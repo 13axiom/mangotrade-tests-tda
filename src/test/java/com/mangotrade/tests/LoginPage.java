@@ -1,6 +1,6 @@
-package cloud.autotests.tests.com.mangotrade;
+package com.mangotrade.tests;
 
-import cloud.autotests.helpers.DriverUtils;
+import com.mangotrade.helpers.DriverUtils;
 import io.qameta.allure.Description;
 import io.qameta.allure.Feature;
 import org.junit.jupiter.api.DisplayName;
