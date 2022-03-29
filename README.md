@@ -7,7 +7,8 @@
 - [Implemented manual checks](##Implemented-manual-checks)
 - [Scheduled to automate checks](##Scheduled-to-automate-checks)
 - [Technology stack](##Technology-stack)
-
+- [Tests launch from Terminal](##Tests-launch-from-Terminal)
+- [Tests launch from Jenkins](#Tests-launch-from-Jenkins#)
 ___
 
 ## :white_check_mark: Implemented automated checks
@@ -20,9 +21,8 @@ ___
 - [x] Page console log should not have errors
 - [x] Successful redirect to registration form
 
-## :white_check_mark: Implemented manual checks
+## :hand: Implemented manual checks
 - [x] Success login to account by widget on main page
-
 
 ## :soon: Scheduled to automate checks
 - [ ] api login checks
@@ -44,10 +44,141 @@ ___
 <a href="https://telegram.org/?setln=en/"><img src="images/logo/Telegram.svg" width="50" height="50"  alt="Telegram"/></a>
 </p>
 
-# Project in Allure TestOps with manual & automated tests
+Current project is developing and it contains autotests written by <code>Java</code> with using code>Selenide</code> for UI-tests.
+В данном проекте автотесты написаны на <code>Java</code> с использованием <code>Selenide</code> для UI-тестов.
+>
+> <code>Selenoid</code> executes browsers launch in containers <code>Docker</code>.
+> <code>Selenoid</code> выполняет запуск браузеров в контейнерах <code>Docker</code>.
+>
+> <code>Allure Report</code> и <code>Allure TestOps</code> generate reports and graphs about tests launh,
+> also them enable possibility to store and to track manual tests, which will be automated in the future.
+> <code>Allure Report</code> и <code>Allure TestOps</code> формируют отчеты и графики о запуске тестов, а также
+> возможность хранения и отслежтвания ручных тестов, которые в дальнейшем также могут быть автоматизирвоаны.
+>
+> For automated project builds is used <code>Gradle</code>.
+> Для автоматизированной сборки проекта используется <code>Gradle</code>.
+>
+> As unit test library  is used <code>JUnit 5</code>.
+> В качестве библиотеки для модульного тестирования используется <code>JUnit 5</code>.
+>
+>  <code>Jenkins</code> executes launch of tests.
+> <code>Jenkins</code> выполняет запуск тестов.
+> After ending of a test run, notifications are sent by <code>Telegram</code> bot.
+> После завершения прогона отправляются уведомления с помощью бота в <code>Telegram</code>.
+
+
+##  Tests launch from Terminal
+
+### :wrench: Local tests launch
+
+```
+gradle clean test
+```
+
+### :hammer_and_wrench:	 Remote tests launch
+
+```
+clean
+test
+-Dbrowser=${BROWSER}
+-DbrowserVersion=${BROWSER_VERSION}
+-DbrowserSize=${BROWSER_SIZE}
+-DbrowserMobileView="${BROWSER_MOBILE}"
+-DremoteDriverUrl=https://${REMOTE_DRIVER_USER}:${REMOTE_DRIVER_PASS}@${REMOTE_DRIVER_URL}/wd/hub/
+-DvideoStorage=https://${REMOTE_DRIVER_URL}/video/
+-Dthreads=${THREADS}
+```
+
+### :clipboard:	 Build settings
+
+> <code>REMOTE_DRIVER_URL</code> – адрес удаленного сервера, на котором будут запускаться тесты.
+> <code>REMOTE_DRIVER_URL</code> – remote server address, where tests will be launched.
+> 
+> REMOTE_DRIVER_USER, REMOTE_DRIVER_PASS - credits for remote server.
+>
+> <code>BROWSER</code> – browser, where test wil be executed (_default value: <code>chrome</code>_).
+> <code>BROWSER</code> – браузер, в котором будут выполняться тесты (_по умолчанию - <code>chrome</code>_).
+>
+> <code>BROWSER_VERSION</code> – browser version, where test will be executed (_default value: <code>91.0</code>_).
+> <code>BROWSER_VERSION</code> – версия браузера, в которой будут выполняться тесты (_по умолчанию - <code>91.0</code>_).
+>
+> <code>BROWSER_SIZE</code> – window size of browser, where test wil be executed (_default value: <code>1920x1080</code>_).
+> <code>BROWSER_SIZE</code> – размер окна браузера, в котором будут выполняться тесты (_по умолчанию - <code>1920x1080</code>_).
+> 
+> <code>THREADS</code> - this setting gives possibility to launch specified number of tests in parallel.
+> 
+> <code>BROWSER_MOBILE</code> - mobile browser, where test will be executed (_default value: null)
+> NOTE: this setting isn't used in current project, because mobile testing is the topic of future lessons
+
 ___
-# Jenkins job
-<a target="_blank" href="https://jenkins.autotests.cloud/job/%s">jenkins.autotests.cloud/job/%s</a>
+## <img width="4%" title="Jenkins" src="images/logo/Jenkins.svg"> Tests launch from [Jenkins](https://jenkins.autotests.cloud/job/c11-lifetesting-mangotrade-tests-tda/)
+*Для запуска сборки необходимо указать значения параметров и нажать кнопку <code><strong>*Собрать*</strong></code>.*
+*For launch remote tests it's necessary to click the option <code><strong>*Собрать с параметрами*</strong></code>, then to fill build settings and click the button <code><strong>*Собрать*</strong></code>.*
+<p align="center">
+  <img src="images/screens/Jenkins.png" alt="job" width="800">
+</p>
+
+*После выполнения сборки, в блоке <code><strong>*История сборок*</strong></code> напротив номера сборки появится
+значок <img width="2%" title="Allure Report" src="images/logo/Allure.svg"><code><strong>*Allure
+Report*</strong></code>, кликнув по которому, откроется страница с сформированным html-отчетом.*
+
+<p align="center">
+  <img src="images/screens/Jenkins2.png" alt="job" width="1000">
+</p>
+
+## <img width="4%" title="Allure Report" src="images/logo/Allure.svg"> Отчет о результатах тестирования в [Allure Report](https://jenkins.autotests.cloud/job/AUTO-638/8/allure/)
+
+### :pushpin: Общая информация
+
+*Главная страница Allure-отчета содержит следующие информационные блоки:*
+
+> - [x] <code><strong>*ALLURE REPORT*</strong></code> - отображает дату и время прохождения теста, общее количество прогнанных кейсов, а также диаграмму с указанием процента и количества успешных, упавших и сломавшихся в процессе выполнения тестов
+>- [x] <code><strong>*TREND*</strong></code> - отображает тренд прохождения тестов от сборки к сборке
+>- [x] <code><strong>*SUITES*</strong></code> - отображает распределение результатов тестов по тестовым наборам
+>- [x] <code><strong>*ENVIRONMENT*</strong></code> - отображает тестовое окружение, на котором запускались тесты (в данном случае информация не задана)
+>- [x] <code><strong>*CATEGORIES*</strong></code> - отображает распределение неуспешно прошедших тестов по видам дефектов
+>- [x] <code><strong>*FEATURES BY STORIES*</strong></code> - отображает распределение тестов по функционалу, который они проверяют
+>- [x] <code><strong>*EXECUTORS*</strong></code> - отображает исполнителя текущей сборки (ссылка на сборку в Jenkins)
+
+<p align="center">
+  <img src="images/screens/Alure_Report3.png" alt="Allure Report" width="900">
+</p>
+
+## <img width="4%" title="Allure TestOPS" src="images/logo/Allure_TO.svg"> Интеграция с [Allure TestOps](https://allure.autotests.cloud/launch/10145)
+
+### :pushpin: Основной дашборд
+
+<p align="center">
+  <img src="images/screens/Alure_TO.png" alt="dashboards" width="900">
+</p>
+
+### :pushpin: Тест-кейсы
+
+<p align="center">
+  <img src="images/screens/Alure_TO3.png" alt="test cases" width="900">
+</p>
+
+## <img width="4%" title="Jira" src="images/logo/Jira.svg"> Интеграция с [Jira](https://jira.autotests.cloud/browse/AUTO-638)
+
+<p align="center">
+  <img src="images/screens/Jira.png" alt="jira" width="1000">
+</p>
+
+## <img width="4%" title="Telegram" src="images/logo/Telegram.svg"> Уведомления в Telegram с использованием бота
+
+> После завершения сборки специальный бот, созданный в <code>Telegram</code>, автоматически обрабатывает и отправляет сообщение с отчетом о прогоне тестов.
+
+<p align="center">
+<img title="Telegram Notifications" src="images/screens/Telegram.png">
+</p>
+
+## <img width="4%" title="Selenoid" src="images/logo/Selenoid.svg"> Пример запуска теста в Selenoid
+
+> К каждому тесту в отчете прилагается видео.
+<p align="center">
+  <img title="Selenoid Video" src="images/gif/test.gif">
+</p>
+
 
 
 # USAGE examples
@@ -55,23 +186,15 @@ ___
 ### For run remote tests need fill remote.properties or to pass value:
 
 * browser (default chrome)
-* browserVersion (default 89.0)
+* browserVersion (default 91.0)
 * browserSize (default 1920x1080)
 * browserMobileView (mobile device name, for example iPhone X)
 * remoteDriverUrl (url address from selenoid or grid)
 * videoStorage (url address where you should get video)
-* threads (number of threads)
+* threads (number of threads, default 5)
 
 
-Run tests with filled remote.properties:
-```bash
-gradle clean test
-```
 
-Run tests with not filled remote.properties:
-```bash
-gradle clean -DremoteDriverUrl=https://%s:%s@selenoid.autotests.cloud/wd/hub/ -DvideoStorage=https://selenoid.autotests.cloud/video/ -Dthreads=1 test
-```
 
 Serve report:
 ```bash
