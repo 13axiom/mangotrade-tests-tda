@@ -10,11 +10,9 @@ import static com.codeborne.selenide.Condition.exactText;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
-import static com.mangotrade.config.Project.config;
 import static io.qameta.allure.Allure.step;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
 
 public class LoginPage extends TestBase {
@@ -57,7 +55,7 @@ public class LoginPage extends TestBase {
         });
 
         step("Redirect to 'https://trade.mangotrade.com/traderoom'", () -> {
-                String currURL = getWebDriver().getCurrentUrl();
+            String currURL = DriverUtils.getCurrUrl();
                 assertEquals("https://trade.mangotrade.com/traderoom", currURL);
         });
     }
@@ -179,7 +177,7 @@ public class LoginPage extends TestBase {
         step("Check redirect to registration form", () -> {
             step("Check link", () -> {
                 sleep(5000);
-                String currURL = getWebDriver().getCurrentUrl();
+                String currURL = DriverUtils.getCurrUrl();
             assertEquals("https://trade.mangotrade.com/en/register", currURL);
             });
 

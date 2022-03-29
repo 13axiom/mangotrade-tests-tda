@@ -34,6 +34,7 @@ public class AllureAttachments {
         return DriverUtils.getPageSourceAsBytes();
     }
 
+
     public static void addVideo(String sessionId) {
         URL videoUrl = DriverUtils.getVideoUrl(sessionId);
         if (videoUrl != null) {
