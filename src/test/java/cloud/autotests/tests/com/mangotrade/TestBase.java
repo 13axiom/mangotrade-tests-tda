@@ -1,4 +1,4 @@
-package cloud.autotests.tests;
+package cloud.autotests.tests.com.mangotrade;
 
 import cloud.autotests.config.Project;
 import cloud.autotests.helpers.AllureAttachments;

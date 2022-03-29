@@ -2,7 +2,7 @@ package cloud.autotests.tests.demowebshop;
 
 import cloud.autotests.config.demowebshop.App;
 import cloud.autotests.helpers.AllureRestAssuredFilter;
-import cloud.autotests.tests.TestBase;
+import cloud.autotests.tests.com.mangotrade.TestBase;
 import com.codeborne.selenide.Configuration;
 import io.qameta.allure.Story;
 import io.restassured.RestAssured;

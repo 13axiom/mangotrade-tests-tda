@@ -1,11 +1,10 @@
-package cloud.autotests.tests;
+package cloud.autotests.tests.com.mangotrade;
 
 import cloud.autotests.helpers.DriverUtils;
 import io.qameta.allure.Description;
+import io.qameta.allure.Feature;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-
-import java.time.Duration;
 
 import static com.codeborne.selenide.Condition.exactText;
 import static com.codeborne.selenide.Condition.text;
@@ -16,9 +15,10 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
-public class GeneratedTests extends TestBase {
+public class LoginPage extends TestBase {
 
     @Test
+    @Feature("Login page design")
     @Description("Login test 5")
     @DisplayName("Login form has form header 'Log In'")
     void checkLoginFormHeader() {
@@ -33,6 +33,7 @@ public class GeneratedTests extends TestBase {
     }
 
     @Test
+    @Feature("Login page functional tests")
     @Description("Login test 1")
     @DisplayName("Success login to account")
     void succesLogin() {
@@ -60,6 +61,7 @@ public class GeneratedTests extends TestBase {
     }
 
     @Test
+    @Feature("Login page functional tests")
     @Description("Login test 2")
     @DisplayName("Failed login with null data")
     void failedLoginBothFieldsNull() {
@@ -82,6 +84,7 @@ public class GeneratedTests extends TestBase {
     }
 
     @Test
+    @Feature("Login page functional tests")
     @Description("Login test 3")
     @DisplayName("Failed login without password")
     void failedLoginNullPassword() {
@@ -105,6 +108,7 @@ public class GeneratedTests extends TestBase {
     }
 
     @Test
+    @Feature("Login page functional tests")
     @Description("Login test 4")
     @DisplayName("Failed login without Email")
     void failedLoginNullEmail() {
@@ -128,6 +132,7 @@ public class GeneratedTests extends TestBase {
     }
 
     @Test
+    @Feature("Login page functional tests")
     @Description("Simple test 2")
     @DisplayName("'Log in' page should have warning about risks")
     void loginPageShouldHaveRiskWarning() {
@@ -141,6 +146,7 @@ public class GeneratedTests extends TestBase {
     }
 
     @Test
+    @Feature("Service test")
     @Description("Simple test 1")
     @DisplayName("Page console log should not have errors")
     void consoleShouldNotHaveErrorsTest() {
@@ -156,6 +162,7 @@ public class GeneratedTests extends TestBase {
     }
 
     @Test
+    @Feature("Login page functional tests")
     @Description("Simple test 3")
     @DisplayName("Successful redirect to registration form")
     void successRedirectToRegistrationForm() {
