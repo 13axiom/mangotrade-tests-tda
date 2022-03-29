@@ -3,10 +3,13 @@
 # Automation project for [MangoTrade.com](mangotrade.com)
 ## :bulb: Содержание:
 
-- [Implemented automated checks](#earth_africa-Implemented-automated-checks)
-- [Implemented manual checks](#earth_africa-Implemented-manual-checks)
-- [Scheduled to automate checks](#earth_africa-Scheduled-to-automate-checks)
-- [Technology stack](#earth_africa-Technology-stack)
+> ➠ [Implemented automated checks](#earth_africa-Implemented-automated-checks)
+>
+> ➠ [Implemented manual checks](#earth_africa-Implemented-manual-checks)
+>
+> ➠ [Scheduled to automate checks](#earth_africa-Scheduled-to-automate-checks)
+>
+> ➠ [Technology stack](#earth_africa-Technology-stack)
 
 ___
 
@@ -25,9 +28,9 @@ ___
 
 
 ## :soon: Scheduled to automate checks
--[ ] api login checks
--[ ] logut checks
--[ ] switch language api checks
+- [ ] api login checks
+- [ ] logut checks
+- [ ] switch language api checks
 
 ## :gear: Technology stack
 <p align="center">
