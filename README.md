@@ -9,6 +9,7 @@
 - [Technology stack](##Technology-stack)
 - [Tests launch from Terminal](##Tests-launch-from-Terminal)
 - [Tests launch from Jenkins](#Tests-launch-from-Jenkins#)
+- [Tests result report in Allure Report](#Tests result report in Allure Report)
 ___
 
 ## :white_check_mark: Implemented automated checks
@@ -121,14 +122,21 @@ ___
 *После выполнения сборки, в блоке <code><strong>*История сборок*</strong></code> напротив номера сборки появится
 значок <img width="2%" title="Allure Report" src="images/logo/Allure.svg"><code><strong>*Allure
 Report*</strong></code>, кликнув по которому, откроется страница с сформированным html-отчетом.*
+*After tests execution, in the panel <code><strong>*История сборок*</strong></code> in the row with build number will be appeared
+icons <img width="2%" title="Allure Report" src="images/logo/Allure.svg"><code><strong>*Allure Report*</strong></code>
+and <img width="2%" title="Allure TestOps" src="images/logo/testops.svg"><code><strong>*Allure TestOps*</strong></code>.
+Icon <img width="2%" title="Allure Report" src="images/logo/Allure.svg"><code><strong>*Allure Report*</strong></code> - opens 
+html-report in Allure Report.
+Icon <img width="2%" title="Allure Report" src="images/logo/Allure.svg"><code><strong>*Allure Report*</strong></code> - opens
+html-report in Allure TestOps.
 
 <p align="center">
   <img src="images/screens/Jenkins2.png" alt="job" width="1000">
 </p>
 
-## <img width="4%" title="Allure Report" src="images/logo/Allure.svg"> Отчет о результатах тестирования в [Allure Report](https://jenkins.autotests.cloud/job/AUTO-638/8/allure/)
+## <img width="4%" title="Allure Report" src="images/logo/Allure_Report.svg"> Tests result report in [Allure Report](https://jenkins.autotests.cloud/job/c11-lifetesting-mangotrade-tests-tda/50/allure/)
 
-### :pushpin: Общая информация
+### :pushpin: Common information
 
 *Главная страница Allure-отчета содержит следующие информационные блоки:*
 
