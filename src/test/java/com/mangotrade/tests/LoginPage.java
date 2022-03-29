@@ -171,11 +171,11 @@ public class LoginPage extends TestBase {
 
         step("'Click button 'Sing Up'", () -> {
             $("[data-test-id=header-register-button]").click();
-            sleep(10000);
         });
 
         step("Check redirect to registration form", () -> {
             step("Check link", () -> {
+                sleep(5000);
                 String currURL = getWebDriver().getCurrentUrl();
             assertEquals("https://trade.mangotrade.com/en/register", currURL);
             });
