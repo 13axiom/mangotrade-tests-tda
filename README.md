@@ -1,7 +1,7 @@
 <a href="https://mangotrade.com"><img src="images/logo/MangoTrade.svg" width="297.999" height="50.939"  alt="MANGOTRADE"/></a>
 
 # Automation project for [MangoTrade.com](mangotrade.com)
-## :bulb: Содержание:
+## :bulb: Content:
 
 - [Implemented automated checks](##Implemented-automated-checks)
 - [Implemented manual checks](##Implemented-manual-checks)
