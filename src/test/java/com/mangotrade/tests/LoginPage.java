@@ -10,6 +10,7 @@ import static com.codeborne.selenide.Condition.exactText;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
+import static com.mangotrade.config.Project.config;
 import static io.qameta.allure.Allure.step;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -172,14 +173,14 @@ public class LoginPage extends TestBase {
 
         step("'Click button 'Sing Up'", () -> {
             $("[data-test-id=header-register-button]").click();
-            sleep(5000);
         });
 
 
         step("Check redirect to registration form", () -> {
             step("Check link", () -> {
-                String regURL = getWebDriver().getCurrentUrl();
-            assertEquals("https://trade.mangotrade.com/en/register", regURL);
+                sleep(5000);
+                String currURL = getWebDriver().getCurrentUrl();
+            assertEquals("https://trade.mangotrade.com/en/register", currURL);
             });
 
             step("Check form header -> should be 'Sing Up'", () -> {
