@@ -179,7 +179,7 @@ public class LoginPage extends TestBase {
         step("Check redirect to registration form", () -> {
             step("Check link", () -> {
                 String currURL = getWebDriver().getCurrentUrl();
-                assertTrue(currURL.equals("\"https://trade.mangotrade.com/en/register"));
+                assertTrue(currURL.equals("https://trade.mangotrade.com/en/register"));
             //assertEquals("https://trade.mangotrade.com/en/register", currURL);
             });
 
