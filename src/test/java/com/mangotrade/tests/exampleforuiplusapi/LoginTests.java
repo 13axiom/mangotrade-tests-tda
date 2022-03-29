@@ -1,6 +1,6 @@
 package com.mangotrade.tests.exampleforuiplusapi;
 
-import com.mangotrade.config.demowebshop.App;
+import com.mangotrade.config.exampleforuiplusapi.App;
 import com.mangotrade.helpers.AllureRestAssuredFilter;
 import com.mangotrade.tests.TestBase;
 import com.codeborne.selenide.Configuration;

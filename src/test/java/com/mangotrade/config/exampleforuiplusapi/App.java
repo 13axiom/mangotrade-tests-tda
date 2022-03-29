@@ -1,4 +1,4 @@
-package com.mangotrade.config.demowebshop;
+package com.mangotrade.config.exampleforuiplusapi;
 
 import org.aeonbits.owner.ConfigFactory;
 
