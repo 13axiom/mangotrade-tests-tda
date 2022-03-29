@@ -6,6 +6,8 @@ import io.qameta.allure.Feature;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import java.time.Duration;
+
 import static com.codeborne.selenide.Condition.exactText;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
@@ -177,7 +179,7 @@ public class LoginPage extends TestBase {
         step("Check redirect to registration form", () -> {
             step("Check link", () -> {
                 String currURL = getWebDriver().getCurrentUrl();
-            assertEquals("https://trade.mangotrade.com/en/register", currURL);
+            assertEquals("https://trade.mangotrade.com/en/register", currURL, Duration.ofSeconds(15));
             });
 
             step("Check form header -> should be 'Sing Up'", () -> {
