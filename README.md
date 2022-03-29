@@ -1,11 +1,50 @@
-![alt text](images/logo/mangoWhiteText.png "MangoTrade")
+<a href="https://mangotrade.com"><img src="images/logo/MangoTrade.svg" width="297.999" height="50.939"  alt="MANGOTRADE"/></a>
 
-<a href="https://mangotrade.com"><img src="images/logo/logo-footer.svg" width="297.999" height="50.939"  alt="MANGOTRADE"/></a>
+# Automation project for [MangoTrade.com](mangotrade.com)
+## :bulb: Содержание:
 
-# Automation project for [MangoTrade.com](mangotrade.com) </span>
+- [Implemented automated checks](#earth_africa-Implemented-automated-checks)
+- [Implemented manual checks](#earth_africa-Implemented-manual-checks)
+- [Scheduled to automate checks](#earth_africa-Scheduled-to-automate-checks)
+- [Technology stack](#earth_africa-Technology-stack)
+
+___
+
+## :white_check_mark: Implemented automated checks
+- [x] Success login to account
+- [x] Failed login with null data
+- [x] Failed login without Email
+- [x] Failed login without Password
+- [x] Login form has form header 'Log In'
+- [x] 'Log in' page should have warning about risks
+- [x] Page console log should not have errors
+- [x] Successful redirect to registration form
+
+## :white_check_mark: Implemented manual checks
+- [x] Success login to account by widget on main page
+
+
+## :soon: Scheduled to automate checks
+-[ ] api login checks
+-[ ] logut checks
+-[ ] switch language api checks
+
+## :gear: Technology stack
+<p align="center">
+<a href="https://www.jetbrains.com/idea/"><img src="images/logo/Intelij_IDEA.svg" width="50" height="50"  alt="IDEA"/></a>
+<a href="https://www.java.com/"><img src="images/logo/Java.svg" width="50" height="50"  alt="Java"/></a>
+<a href="https://github.com/"><img src="images/logo/GitHub.svg" width="50" height="50"  alt="Github"/></a>
+<a href="https://junit.org/junit5/"><img src="images/logo/JUnit5.svg" width="50" height="50"  alt="JUnit 5"/></a>
+<a href="https://gradle.org/"><img src="images/logo/Gradle.svg" width="50" height="50"  alt="Gradle"/></a>
+<a href="https://selenide.org/"><img src="images/logo/Selenide.svg" width="50" height="50"  alt="Selenide"/></a>
+<a href="https://aerokube.com/selenoid/"><img src="images/logo/Selenoid.svg" width="50" height="50"  alt="Selenoid"/></a>
+<a href="https://github.com/allure-framework/allure2"><img src="images/logo/Allure_Report.svg" width="50" height="50"  alt="Allure"/></a>
+<a href="https://qameta.io/"><img src="images/logo/testops.png" width="50" height="50"  alt="Allure TestOps"/></a>
+<a href="https://www.jenkins.io/"><img src="images/logo/Jenkins.svg" width="50" height="50"  alt="Jenkins"/></a>
+<a href="https://telegram.org/?setln=en/"><img src="images/logo/Telegram.svg" width="50" height="50"  alt="Telegram"/></a>
+</p>
 
 # Project in Allure TestOps with manual & automated tests
-<a target="_blank" href="https://allure.autotests.cloud/project/%s">allure.autotests.cloud/project/%s</a> (ask admin@qa.guru for access)
 ___
 # Jenkins job
 <a target="_blank" href="https://jenkins.autotests.cloud/job/%s">jenkins.autotests.cloud/job/%s</a>
