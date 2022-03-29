@@ -174,16 +174,15 @@ public class LoginPage extends TestBase {
         });
 
         step("Check redirect to registration form", () -> {
-            step("Check form header -> should be 'Sing Up'", () -> {
-                $(".RegisterFormContainer").$("h1").shouldHave(exactText("Sign Up"));
-            });
-
             step("Check link", () -> {
-                sleep(5000);
+                sleep(10000);
                 String currURL = getWebDriver().getCurrentUrl();
             assertEquals("https://trade.mangotrade.com/en/register", currURL);
             });
 
+            step("Check form header -> should be 'Sing Up'", () -> {
+                $(".RegisterFormContainer").$("h1").shouldHave(exactText("Sign Up"));
+            });
         });
     }
 }
