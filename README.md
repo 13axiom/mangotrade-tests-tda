@@ -1,6 +1,10 @@
+# Automation project of <span style="color: orange"> mangotrade.com </span>
+<a href="https://www.jetbrains.com/idea/"><img src="images/logo/Idea.svg" width="50" height="50"  alt="IDEA"/></a>
+
+
 # Project in Allure TestOps with manual & automated tests
 <a target="_blank" href="https://allure.autotests.cloud/project/%s">allure.autotests.cloud/project/%s</a> (ask admin@qa.guru for access)
-
+___
 # Jenkins job
 <a target="_blank" href="https://jenkins.autotests.cloud/job/%s">jenkins.autotests.cloud/job/%s</a>
 
