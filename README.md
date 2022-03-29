@@ -123,11 +123,11 @@ ___
 значок <img width="2%" title="Allure Report" src="images/logo/Allure.svg"><code><strong>*Allure
 Report*</strong></code>, кликнув по которому, откроется страница с сформированным html-отчетом.*
 *After tests execution, in the panel <code><strong>*История сборок*</strong></code> in the row with build number will be appeared
-icons <img width="2%" title="Allure Report" src="images/logo/Allure.svg"><code><strong>*Allure Report*</strong></code>
-and <img width="2%" title="Allure TestOps" src="images/logo/testops.svg"><code><strong>*Allure TestOps*</strong></code>.
-Icon <img width="2%" title="Allure Report" src="images/logo/Allure.svg"><code><strong>*Allure Report*</strong></code> - opens 
+icons <img width="2%" title="Allure Report" src="images/logo/Allure_Report.svg"><code><strong>*Allure Report*</strong></code>
+and <img width="2%" title="Allure TestOps" src="images/logo/testops.png"><code><strong>*Allure TestOps*</strong></code>.
+Icon <img width="2%" title="Allure Report" src="images/logo/Allure_Report.svg"><code><strong>*Allure Report*</strong></code> - opens 
 html-report in Allure Report.
-Icon <img width="2%" title="Allure Report" src="images/logo/Allure.svg"><code><strong>*Allure Report*</strong></code> - opens
+Icon <img width="2%" title="Allure TestOps" src="images/logo/testops.png"><code><strong>*Allure TestOps*</strong></code> - opens
 html-report in Allure TestOps.*
 
 <p align="center">
