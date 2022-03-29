@@ -172,15 +172,14 @@ public class LoginPage extends TestBase {
 
         step("'Click button 'Sing Up'", () -> {
             $("[data-test-id=header-register-button]").click();
+            sleep(5000);
         });
 
-        sleep(5000);
 
         step("Check redirect to registration form", () -> {
             step("Check link", () -> {
-                String currURL = getWebDriver().getCurrentUrl();
-                assertTrue(currURL.equals("https://trade.mangotrade.com/en/register"));
-            //assertEquals("https://trade.mangotrade.com/en/register", currURL);
+                String regURL = getWebDriver().getCurrentUrl();
+            assertEquals("https://trade.mangotrade.com/en/register", regURL);
             });
 
             step("Check form header -> should be 'Sing Up'", () -> {
