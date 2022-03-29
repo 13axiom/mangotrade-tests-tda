@@ -1,6 +1,8 @@
-# Automation project of <span style="color: orange"> mangotrade.com </span>
-<a href="https://www.jetbrains.com/idea/"><img src="images/logo/Idea.svg" width="50" height="50"  alt="IDEA"/></a>
+![alt text](images/logo/mangoWhiteText.png "MangoTrade")
 
+<a href="https://mangotrade.com"><img src="images/logo/logo-footer.svg" width="297.999" height="50.939"  alt="MANGOTRADE"/></a>
+
+# Automation project for [MangoTrade.com](mangotrade.com) </span>
 
 # Project in Allure TestOps with manual & automated tests
 <a target="_blank" href="https://allure.autotests.cloud/project/%s">allure.autotests.cloud/project/%s</a> (ask admin@qa.guru for access)
