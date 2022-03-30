@@ -49,19 +49,19 @@ ___
 <a href="https://telegram.org/?setln=en/"><img src="images/logo/Telegram.svg" width="50" height="50"  alt="Telegram"/></a>
 </p>
 
-Current project is developing and it contains autotests written by <code>Java</code> with using code>Selenide</code> for UI-tests.
+Current project is developing and it contains autotests written by <code>Java</code> with using <code>Selenide</code> for UI-tests.
 >
 > <code>Selenoid</code> executes browsers launch in containers <code>Docker</code>.
 >
-> <code>Allure Report</code> и <code>Allure TestOps</code> generate reports and graphs about tests launch,
-> also them enable possibility to store and to track manual tests, which will be automated in the future.
+> <code>Allure Report</code> and <code>Allure TestOps</code> generate reports and graphs about tests launch,
+> also they enable possibility to store and to track manual tests, which will be automated in the future.
 >
-> For automated project builds is used <code>Gradle</code>.
+> <code>Gradle</code> is used for automated project builds.
 >
-> As unit test library is used <code>JUnit 5</code>.
+> <code>JUnit 5</code> is used as unit test library.
 >
 > <code>Jenkins</code> executes launch of tests.
-> After ending of a test run, notifications are sent by <code>Telegram</code> bot.
+> After ending the test run, notifications are sent by <code>Telegram</code> bot.
 
 ##  Tests launch from Terminal
 
@@ -91,27 +91,27 @@ test
 > 
 > REMOTE_DRIVER_USER, REMOTE_DRIVER_PASS - credits for remote server.
 >
-> <code>BROWSER</code> – browser, where test wil be executed (_default value: <code>chrome</code>_).
+> <code>BROWSER</code> – browser, where tests will be executed (_default value: <code>chrome</code>_).
 >
-> <code>BROWSER_VERSION</code> – browser version, where test will be executed (_default value: <code>91.0</code>_).
+> <code>BROWSER_VERSION</code> – browser version, where tests will be executed (_default value: <code>91.0</code>_).
 >
-> <code>BROWSER_SIZE</code> – window size of browser, where test wil be executed (_default value: <code>1920x1080</code>_).
+> <code>BROWSER_SIZE</code> – window size of browser, where tests wil be executed (_default value: <code>1920x1080</code>_).
 > 
 > <code>THREADS</code> - this setting gives possibility to launch specified number of tests in parallel.
 > 
-> <code>BROWSER_MOBILE</code> - mobile browser, where test will be executed (_default value: null)
+> <code>BROWSER_MOBILE</code> - mobile browser, where tests will be executed (_default value: null)
 > NOTE: this setting isn't used in current project, because mobile testing is the topic of future lessons
 
 ___
 ## <img width="4%" title="Jenkins" src="images/logo/Jenkins.svg"> Tests launch from [Jenkins](https://jenkins.autotests.cloud/job/c11-lifetesting-mangotrade-tests-tda/)
-*For launch remote tests it's necessary to click the option <code><strong>*Собрать с параметрами*</strong></code>, then to fill build settings and click the button <code><strong>*Собрать*</strong></code>.*
+*For launch remote tests it's necessary to click the option <code><strong>*Собрать с параметрами*</strong></code>, then to fill build settings and to click the button <code><strong>*Собрать*</strong></code>.*
 <p align="center">
   <img src="images/screens/Jenkins.png" alt="job" width="800">
 </p>
 
-*After tests execution, in the panel <code><strong>*История сборок*</strong></code> in the row with build number will be appeared
+*After tests execution, in the panel <code><strong>*История сборок*</strong></code> in the row with build number
 icons <img width="2%" title="Allure Report" src="images/logo/Allure_Report.svg"><code><strong>*Allure Report*</strong></code>
-and <img width="2%" title="Allure TestOps" src="images/logo/testops.png"><code><strong>*Allure TestOps*</strong></code>.*
+and <img width="2%" title="Allure TestOps" src="images/logo/testops.png"><code><strong>*Allure TestOps*</strong></code> will appear.*
 
 *Icon <img width="2%" title="Allure Report" src="images/logo/Allure_Report.svg"><code><strong>*Allure Report*</strong></code> opens 
 html-report in Allure Report.*
@@ -127,13 +127,13 @@ html-report in Allure TestOps.*
 
 ### :pushpin: Common information
 
-*Allure report main page contains next informations blocks:* 
-> - [x] <code><strong>*ALLURE REPORT*</strong></code> -  date and time of tests launch, total number executed cases and the diagram with indicating of percentage and number successful, failed and broken tests
->- [x] <code><strong>*TREND*</strong></code> - displays trend of passing tests from one build to other
+*Allure report main page contains next information blocks:* 
+> - [x] <code><strong>*ALLURE REPORT*</strong></code> -  date and time of tests launch, total number of executed cases and the diagram with indication of percentage and number of successful, failed and broken tests
+>- [x] <code><strong>*TREND*</strong></code> - displays trend of passing tests from one build to another
 >- [x] <code><strong>*SUITES*</strong></code> - displays the distribution of tests results by tests suites
 >- [x] <code><strong>*ENVIRONMENT*</strong></code> - displays test environment where tests were launched
 >- [x] <code><strong>*CATEGORIES*</strong></code> - displays the distribution of failed tests by types of defects
->- [x] <code><strong>*FEATURES BY STORIES*</strong></code> - displays the distribution of tests by functionality, which they checks
+>- [x] <code><strong>*FEATURES BY STORIES*</strong></code> - displays the distribution of tests by functionality, which they check
 >- [x] <code><strong>*EXECUTORS*</strong></code> - displays the executor of the current build (link to Jenkins build)
 
 <p align="center">
