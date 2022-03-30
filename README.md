@@ -13,7 +13,7 @@
 - [Allure TestOps integration](#Allure-TestOps-integration)
 - [Jira integration](#Jira-integration)
 - [Telegram notifications using a bot](#Telegram-notifications-using-a-bot)
-- [Example of test execution in Selenoid](#Example-of-test-execution-in-    Selenoid)
+- [Example of test execution in Selenoid](#Example-of-test-execution-in-Selenoid)
 ___
 
 ## :white_check_mark: Implemented automated checks
@@ -50,27 +50,18 @@ ___
 </p>
 
 Current project is developing and it contains autotests written by <code>Java</code> with using code>Selenide</code> for UI-tests.
-В данном проекте автотесты написаны на <code>Java</code> с использованием <code>Selenide</code> для UI-тестов.
 >
 > <code>Selenoid</code> executes browsers launch in containers <code>Docker</code>.
-> <code>Selenoid</code> выполняет запуск браузеров в контейнерах <code>Docker</code>.
 >
-> <code>Allure Report</code> и <code>Allure TestOps</code> generate reports and graphs about tests launh,
+> <code>Allure Report</code> и <code>Allure TestOps</code> generate reports and graphs about tests launch,
 > also them enable possibility to store and to track manual tests, which will be automated in the future.
-> <code>Allure Report</code> и <code>Allure TestOps</code> формируют отчеты и графики о запуске тестов, а также
-> возможность хранения и отслежтвания ручных тестов, которые в дальнейшем также могут быть автоматизирвоаны.
 >
 > For automated project builds is used <code>Gradle</code>.
-> Для автоматизированной сборки проекта используется <code>Gradle</code>.
 >
-> As unit test library  is used <code>JUnit 5</code>.
-> В качестве библиотеки для модульного тестирования используется <code>JUnit 5</code>.
+> As unit test library is used <code>JUnit 5</code>.
 >
->  <code>Jenkins</code> executes launch of tests.
-> <code>Jenkins</code> выполняет запуск тестов.
+> <code>Jenkins</code> executes launch of tests.
 > After ending of a test run, notifications are sent by <code>Telegram</code> bot.
-> После завершения прогона отправляются уведомления с помощью бота в <code>Telegram</code>.
-
 
 ##  Tests launch from Terminal
 
@@ -96,19 +87,15 @@ test
 
 ### :clipboard:	 Build settings
 
-> <code>REMOTE_DRIVER_URL</code> – адрес удаленного сервера, на котором будут запускаться тесты.
 > <code>REMOTE_DRIVER_URL</code> – remote server address, where tests will be launched.
 > 
 > REMOTE_DRIVER_USER, REMOTE_DRIVER_PASS - credits for remote server.
 >
 > <code>BROWSER</code> – browser, where test wil be executed (_default value: <code>chrome</code>_).
-> <code>BROWSER</code> – браузер, в котором будут выполняться тесты (_по умолчанию - <code>chrome</code>_).
 >
 > <code>BROWSER_VERSION</code> – browser version, where test will be executed (_default value: <code>91.0</code>_).
-> <code>BROWSER_VERSION</code> – версия браузера, в которой будут выполняться тесты (_по умолчанию - <code>91.0</code>_).
 >
 > <code>BROWSER_SIZE</code> – window size of browser, where test wil be executed (_default value: <code>1920x1080</code>_).
-> <code>BROWSER_SIZE</code> – размер окна браузера, в котором будут выполняться тесты (_по умолчанию - <code>1920x1080</code>_).
 > 
 > <code>THREADS</code> - this setting gives possibility to launch specified number of tests in parallel.
 > 
@@ -117,15 +104,11 @@ test
 
 ___
 ## <img width="4%" title="Jenkins" src="images/logo/Jenkins.svg"> Tests launch from [Jenkins](https://jenkins.autotests.cloud/job/c11-lifetesting-mangotrade-tests-tda/)
-*Для запуска сборки необходимо указать значения параметров и нажать кнопку <code><strong>*Собрать*</strong></code>.*
 *For launch remote tests it's necessary to click the option <code><strong>*Собрать с параметрами*</strong></code>, then to fill build settings and click the button <code><strong>*Собрать*</strong></code>.*
 <p align="center">
   <img src="images/screens/Jenkins.png" alt="job" width="800">
 </p>
 
-*После выполнения сборки, в блоке <code><strong>*История сборок*</strong></code> напротив номера сборки появится
-значок <img width="2%" title="Allure Report" src="images/logo/Allure.svg"><code><strong>*Allure
-Report*</strong></code>, кликнув по которому, откроется страница с сформированным html-отчетом.*
 *After tests execution, in the panel <code><strong>*История сборок*</strong></code> in the row with build number will be appeared
 icons <img width="2%" title="Allure Report" src="images/logo/Allure_Report.svg"><code><strong>*Allure Report*</strong></code>
 and <img width="2%" title="Allure TestOps" src="images/logo/testops.png"><code><strong>*Allure TestOps*</strong></code>.
@@ -143,7 +126,6 @@ html-report in Allure TestOps.*
 ### :pushpin: Common information
 
 *Allure report main page contains next informations blocks:* 
-*Главная страница Allure-отчета содержит следующие информационные блоки:*
 > - [x] <code><strong>*ALLURE REPORT*</strong></code> -  date and time of tests launch, total number executed cases and the diagram with indicating of percentage and number successful, failed and broken tests
 >- [x] <code><strong>*TREND*</strong></code> - displays trend of passing tests from one build to other
 >- [x] <code><strong>*SUITES*</strong></code> - displays the distribution of tests results by tests suites
@@ -151,14 +133,6 @@ html-report in Allure TestOps.*
 >- [x] <code><strong>*CATEGORIES*</strong></code> - displays the distribution of failed tests by types of defects
 >- [x] <code><strong>*FEATURES BY STORIES*</strong></code> - displays the distribution of tests by functionality, which they checks
 >- [x] <code><strong>*EXECUTORS*</strong></code> - displays the executor of the current build (link to Jenkins build)
-> 
->- [x] <code><strong>*ALLURE REPORT*</strong></code> - отображает дату и время прохождения теста, общее количество прогнанных кейсов, а также диаграмму с указанием процента и количества успешных, упавших и сломавшихся в процессе выполнения тестов
->- [x] <code><strong>*TREND*</strong></code> - отображает тренд прохождения тестов от сборки к сборке
->- [x] <code><strong>*SUITES*</strong></code> - отображает распределение результатов тестов по тестовым наборам
->- [x] <code><strong>*ENVIRONMENT*</strong></code> - отображает тестовое окружение, на котором запускались тесты (в данном случае информация не задана)
->- [x] <code><strong>*CATEGORIES*</strong></code> - отображает распределение неуспешно прошедших тестов по видам дефектов
->- [x] <code><strong>*FEATURES BY STORIES*</strong></code> - отображает распределение тестов по функционалу, который они проверяют
->- [x] <code><strong>*EXECUTORS*</strong></code> - отображает исполнителя текущей сборки (ссылка на сборку в Jenkins)
 
 <p align="center">
   <img src="images/screens/AllureReport.png" alt="Allure Report" width="900">
@@ -186,8 +160,7 @@ html-report in Allure TestOps.*
 
 ## <img width="4%" title="Telegram" src="images/logo/Telegram.svg"> Telegram notifications using a bot
 
-> После завершения сборки специальный бот, созданный в <code>Telegram</code>, автоматически обрабатывает и отправляет сообщение с отчетом о прогоне тестов.
-> After the test run is completed, created <code>Telegram</code>-bot automatically handles and sends a message with a test run report.   
+ > After the test run is completed, created <code>Telegram</code>-bot automatically handles and sends a message with a test run report.   
 
 <p align="center">
 <img title="Telegram Notifications" src="images/screens/tgnotification.png">
