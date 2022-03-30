@@ -10,6 +10,10 @@
 - [Tests launch from Terminal](##Tests-launch-from-Terminal)
 - [Tests launch from Jenkins](#Tests-launch-from-Jenkins#)
 - [Tests results report in Allure Report](#Tests-results-report-in-Allure-Report)
+- [Allure TestOps integration](#Allure-TestOps-integration)
+- [Jira integration](#Jira-integration)
+- [Telegram notifications using a bot](#Telegram-notifications-using-a-bot)
+- [Example of test execution in Selenoid](#Example-of-test-execution-in-    Selenoid)
 ___
 
 ## :white_check_mark: Implemented automated checks
@@ -148,7 +152,7 @@ html-report in Allure TestOps.*
 >- [x] <code><strong>*FEATURES BY STORIES*</strong></code> - displays the distribution of tests by functionality, which they checks
 >- [x] <code><strong>*EXECUTORS*</strong></code> - displays the executor of the current build (link to Jenkins build)
 > 
-> - [x] <code><strong>*ALLURE REPORT*</strong></code> - отображает дату и время прохождения теста, общее количество прогнанных кейсов, а также диаграмму с указанием процента и количества успешных, упавших и сломавшихся в процессе выполнения тестов
+>- [x] <code><strong>*ALLURE REPORT*</strong></code> - отображает дату и время прохождения теста, общее количество прогнанных кейсов, а также диаграмму с указанием процента и количества успешных, упавших и сломавшихся в процессе выполнения тестов
 >- [x] <code><strong>*TREND*</strong></code> - отображает тренд прохождения тестов от сборки к сборке
 >- [x] <code><strong>*SUITES*</strong></code> - отображает распределение результатов тестов по тестовым наборам
 >- [x] <code><strong>*ENVIRONMENT*</strong></code> - отображает тестовое окружение, на котором запускались тесты (в данном случае информация не задана)
@@ -160,69 +164,38 @@ html-report in Allure TestOps.*
   <img src="images/screens/AllureReport.png" alt="Allure Report" width="900">
 </p>
 
-## <img width="4%" title="Allure TestOPS" src="images/logo/Allure_TO.svg"> Интеграция с [Allure TestOps](https://allure.autotests.cloud/launch/10145)
+## <img width="4%" title="Allure TestOPS" src="images/logo/testops.png"> [Allure TestOps](https://allure.autotests.cloud/launch/11665) integration
 
-### :pushpin: Основной дашборд
-
-<p align="center">
-  <img src="images/screens/Alure_TO.png" alt="dashboards" width="900">
-</p>
-
-### :pushpin: Тест-кейсы
+### :pushpin: Overview dashboard
 
 <p align="center">
-  <img src="images/screens/Alure_TO3.png" alt="test cases" width="900">
+  <img src="images/screens/TestOpsOverview.png" alt="dashboards" width="900">
 </p>
 
-## <img width="4%" title="Jira" src="images/logo/Jira.svg"> Интеграция с [Jira](https://jira.autotests.cloud/browse/AUTO-638)
+### :pushpin: Test cases
 
 <p align="center">
-  <img src="images/screens/Jira.png" alt="jira" width="1000">
+  <img src="images/screens/TestOpsTC.png" alt="test cases" width="900">
 </p>
 
-## <img width="4%" title="Telegram" src="images/logo/Telegram.svg"> Уведомления в Telegram с использованием бота
+## <img width="4%" title="Jira" src="images/logo/Jira.svg"> [Jira](https://jira.autotests.cloud/browse/AUTO-810) integration
+
+<p align="center">
+  <img src="images/screens/jira.png" alt="jira" width="1000">
+</p>
+
+## <img width="4%" title="Telegram" src="images/logo/Telegram.svg"> Telegram notifications using a bot
 
 > После завершения сборки специальный бот, созданный в <code>Telegram</code>, автоматически обрабатывает и отправляет сообщение с отчетом о прогоне тестов.
+> After the test run is completed, created <code>Telegram</code>-bot automatically handles and sends a message with a test run report.   
 
 <p align="center">
-<img title="Telegram Notifications" src="images/screens/Telegram.png">
+<img title="Telegram Notifications" src="images/screens/tgnotification.png">
 </p>
 
-## <img width="4%" title="Selenoid" src="images/logo/Selenoid.svg"> Пример запуска теста в Selenoid
+## <img width="4%" title="Selenoid" src="images/logo/Selenoid.svg"> Example of test execution in Selenoid
 
-> К каждому тесту в отчете прилагается видео.
+> A video is attached to each test in the report.
 <p align="center">
-  <img title="Selenoid Video" src="images/gif/test.gif">
+  <video title="Selenoid Video" src="images/video/testexecmango.mp4">
 </p>
-
-
-
-# USAGE examples
-
-### For run remote tests need fill remote.properties or to pass value:
-
-* browser (default chrome)
-* browserVersion (default 91.0)
-* browserSize (default 1920x1080)
-* browserMobileView (mobile device name, for example iPhone X)
-* remoteDriverUrl (url address from selenoid or grid)
-* videoStorage (url address where you should get video)
-* threads (number of threads, default 5)
-
-
-
-
-Serve report:
-```bash
-allure serve build/allure-results
-```
-
-
-###### For further development there are some example tests in src/test/java/cloud.autotests/tests/demowebshop
-* remove @Disabled("...") annotation to run tests
-```bash
-gradle clean demowebshop
-```
-
-:heart: <a target="_blank" href="https://qa.guru">qa.guru</a><br/>
-:blue_heart: <a target="_blank" href="https://t.me/qa_automation">t.me/qa_automation</a>
