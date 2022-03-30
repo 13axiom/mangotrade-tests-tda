@@ -3,17 +3,17 @@
 # Automation project for [MangoTrade.com](mangotrade.com)
 ## :bulb: Content:
 
-- [Implemented automated checks](#Implemented-automated-checks)
-- [Implemented manual checks](#Implemented-manual-checks)
+- [Implemented automated checks](#white_check_mark-Implemented-automated-checks)
+- [Implemented manual checks](#hand-Implemented-manual-checks)
 - [Scheduled to automate checks](#soon-Scheduled-to-automate-checks)
-- [Technology stack](#Technology-stack)
+- [Technology stack](#gear-Technology-stack)
 - [Tests launch from Terminal](##Tests-launch-from-Terminal)
-- [Tests launch from Jenkins](#Tests-launch-from-Jenkins#)
-- [Tests results report in Allure Report](#Tests-results-report-in-Allure-Report)
-- [Allure TestOps integration](#Allure-TestOps-integration)
-- [Jira integration](#Jira-integration)
-- [Telegram notifications using a bot](#Telegram-notifications-using-a-bot)
-- [Example of test execution in Selenoid](#Example-of-test-execution-in-Selenoid)
+- [Tests launch from Jenkins](#-Tests-launch-from-Jenkins#)
+- [Tests results report in Allure Report](#-Tests-results-report-in-Allure-Report)
+- [Allure TestOps integration](#-Allure-TestOps-integration)
+- [Jira integration](#-Jira-integration)
+- [Telegram notifications using a bot](#-Telegram-notifications-using-a-bot)
+- [Example of test execution in Selenoid](#-Example-of-test-execution-in-Selenoid)
 ___
 
 ## :white_check_mark: Implemented automated checks
