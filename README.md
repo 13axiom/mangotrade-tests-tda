@@ -196,6 +196,5 @@ html-report in Allure TestOps.*
 ## <img width="4%" title="Selenoid" src="images/logo/Selenoid.svg"> Example of test execution in Selenoid
 
 > A video is attached to each test in the report.
-<p align="center">
-  <video title="Selenoid Video" src="images/video/testexecmango.mp4">
-</p>
+
+![video](images/video/testexecmango.mp4)
