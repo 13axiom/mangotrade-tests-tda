@@ -89,7 +89,7 @@ test
 
 > <code>REMOTE_DRIVER_URL</code> – remote server address, where tests will be launched.
 > 
-> REMOTE_DRIVER_USER, REMOTE_DRIVER_PASS - credits for remote server.
+> <code>REMOTE_DRIVER_USER, REMOTE_DRIVER_PASS</code> - credits for remote server.
 >
 > <code>BROWSER</code> – browser, where tests will be executed (_default value: <code>chrome</code>_).
 >
