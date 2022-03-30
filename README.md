@@ -197,4 +197,7 @@ html-report in Allure TestOps.*
 
 > A video is attached to each test in the report.
 
-https://youtu.be/BMe5_Jc5O7M
+
+
+https://user-images.githubusercontent.com/84909251/160829280-81dffde8-a9ad-4b75-9e2a-2a19c6019a74.mp4
+
