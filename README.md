@@ -9,7 +9,7 @@
 - [Technology stack](##Technology-stack)
 - [Tests launch from Terminal](##Tests-launch-from-Terminal)
 - [Tests launch from Jenkins](#Tests-launch-from-Jenkins#)
-- [Tests result report in Allure Report](#Tests result report in Allure Report)
+- [Tests results report in Allure Report](#Tests-results-report-in-Allure-Report)
 ___
 
 ## :white_check_mark: Implemented automated checks
@@ -134,12 +134,20 @@ html-report in Allure TestOps.*
   <img src="images/screens/Jenkins2.png" alt="job" width="1000">
 </p>
 
-## <img width="4%" title="Allure Report" src="images/logo/Allure_Report.svg"> Tests result report in [Allure Report](https://jenkins.autotests.cloud/job/c11-lifetesting-mangotrade-tests-tda/50/allure/)
+## <img width="4%" title="Allure Report" src="images/logo/Allure_Report.svg"> Tests results report in [Allure Report](https://jenkins.autotests.cloud/job/c11-lifetesting-mangotrade-tests-tda/50/allure/)
 
 ### :pushpin: Common information
 
+*Allure report main page contains next informations blocks:* 
 *Главная страница Allure-отчета содержит следующие информационные блоки:*
-
+> - [x] <code><strong>*ALLURE REPORT*</strong></code> -  date and time of tests launch, total number executed cases and the diagram with indicating of percentage and number successful, failed and broken tests
+>- [x] <code><strong>*TREND*</strong></code> - displays trend of passing tests from one build to other
+>- [x] <code><strong>*SUITES*</strong></code> - displays the distribution of tests results by tests suites
+>- [x] <code><strong>*ENVIRONMENT*</strong></code> - displays test environment where tests were launched
+>- [x] <code><strong>*CATEGORIES*</strong></code> - displays the distribution of failed tests by types of defects
+>- [x] <code><strong>*FEATURES BY STORIES*</strong></code> - displays the distribution of tests by functionality, which they checks
+>- [x] <code><strong>*EXECUTORS*</strong></code> - displays the executor of the current build (link to Jenkins build)
+> 
 > - [x] <code><strong>*ALLURE REPORT*</strong></code> - отображает дату и время прохождения теста, общее количество прогнанных кейсов, а также диаграмму с указанием процента и количества успешных, упавших и сломавшихся в процессе выполнения тестов
 >- [x] <code><strong>*TREND*</strong></code> - отображает тренд прохождения тестов от сборки к сборке
 >- [x] <code><strong>*SUITES*</strong></code> - отображает распределение результатов тестов по тестовым наборам
@@ -149,7 +157,7 @@ html-report in Allure TestOps.*
 >- [x] <code><strong>*EXECUTORS*</strong></code> - отображает исполнителя текущей сборки (ссылка на сборку в Jenkins)
 
 <p align="center">
-  <img src="images/screens/Alure_Report3.png" alt="Allure Report" width="900">
+  <img src="images/screens/AllureReport.png" alt="Allure Report" width="900">
 </p>
 
 ## <img width="4%" title="Allure TestOPS" src="images/logo/Allure_TO.svg"> Интеграция с [Allure TestOps](https://allure.autotests.cloud/launch/10145)
