@@ -9,7 +9,6 @@ import org.junit.jupiter.api.Test;
 import static com.codeborne.selenide.Condition.exactText;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
-import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 import static io.qameta.allure.Allure.step;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -36,27 +35,27 @@ public class LoginPage extends TestBase {
     @Feature("Login page functional tests")
     @Description("Login test 1")
     @DisplayName("Success login to account")
-    void succesLogin() {
+    void successLogin() {
         step("Open 'https://trade.mangotrade.com/en/login'", () -> {
-                open("https://trade.mangotrade.com/en/login");
+            open("https://trade.mangotrade.com/en/login");
         });
 
         step("Set email 'mnn'", () -> {
-                $("[name=identifier]").setValue("mnenie@bk.ru");
+            $("[name=identifier]").setValue("mnenie@bk.ru");
         });
 
         step("Set password 'Test123'", () -> {
-                $("[name=password]").setValue("Test1234");
+            $("[name=password]").setValue("Test1234");
         });
 
         step("Click button \"Log in\"", () -> {
-                $("[data-test-id=login-submit-button]").click();
-                sleep(5000);
+            $("[data-test-id=login-submit-button]").click();
+            sleep(5000);
         });
 
         step("Redirect to 'https://trade.mangotrade.com/traderoom'", () -> {
             String currURL = DriverUtils.getCurrUrl();
-                assertEquals("https://trade.mangotrade.com/traderoom", currURL);
+            assertEquals("https://trade.mangotrade.com/traderoom", currURL);
         });
     }
 
@@ -66,11 +65,11 @@ public class LoginPage extends TestBase {
     @DisplayName("Failed login with null data")
     void failedLoginBothFieldsNull() {
         step("Open 'https://trade.mangotrade.com/en/login'", () -> {
-                open("https://trade.mangotrade.com/en/login");
+            open("https://trade.mangotrade.com/en/login");
         });
 
         step("Click button \"Log in\"", () -> {
-                $("[data-test-id=login-submit-button]").click();
+            $("[data-test-id=login-submit-button]").click();
         });
 
         step("Expected Results", () -> {
@@ -93,7 +92,7 @@ public class LoginPage extends TestBase {
         });
 
         step("Set email 'mnn'", () -> {
-                $("[name=identifier]").setValue("mnenie@bk.ru");
+            $("[name=identifier]").setValue("mnenie@bk.ru");
         });
 
         step("Click button \"Log in\"", () -> {
@@ -117,7 +116,7 @@ public class LoginPage extends TestBase {
         });
 
         step("Set password 'Test123'", () -> {
-                $("[name=password]").setValue("Test1234");
+            $("[name=password]").setValue("Test1234");
         });
 
         step("Click button \"Log in\"", () -> {
@@ -140,8 +139,8 @@ public class LoginPage extends TestBase {
                 open("https://trade.mangotrade.com/en/login"));
 
         step("'Log in' page should have warning about risks", () -> {
-           $("[data-test-id=auth-warning-block]").scrollIntoView(true).
-                   shouldHave(exactText("Risk Warning: All trading involves risk. Only risk capital you're prepared to lose."));
+            $("[data-test-id=auth-warning-block]").scrollIntoView(true).
+                    shouldHave(exactText("Risk Warning: All trading involves risk. Only risk capital you're prepared to lose."));
         });
     }
 
@@ -178,7 +177,7 @@ public class LoginPage extends TestBase {
             step("Check link", () -> {
                 sleep(5000);
                 String currURL = DriverUtils.getCurrUrl();
-            assertEquals("https://trade.mangotrade.com/en/register", currURL);
+                assertEquals("https://trade.mangotrade.com/en/register", currURL);
             });
 
             step("Check form header -> should be 'Sing Up'", () -> {
