@@ -1,9 +1,11 @@
 package com.mangotrade.tests;
 
 import com.mangotrade.config.Project;
+import com.mangotrade.config.ProjectConfig;
 import com.mangotrade.helpers.DriverUtils;
 import io.qameta.allure.Description;
 import io.qameta.allure.Feature;
+import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -32,12 +34,14 @@ public class LoginPage extends TestBase {
         });
     }
 
-   /* @Test
+    @Test
     @DisplayName("assertj api token test")
     void apiTokenTest() {
-        System.setProperty("apitoken","some_token");
-        assertThat(Project.config.apiToken()).isEqualTo("new_token");
-    }*/
+        System.setProperty("url","iq");//верное значение параметра "iq", при значениях "mango" и "bear" будет ошибка
+        //System.setProperty("apitoken","new_token");
+        ProjectConfig config = ConfigFactory.create(ProjectConfig.class,System.getProperties());
+        assertThat(config.apiToken()).isEqualTo("new_token");
+    }
 
    /* @Test
     @Feature("Login page functional tests")
