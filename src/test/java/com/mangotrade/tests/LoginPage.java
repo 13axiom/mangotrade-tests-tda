@@ -1,5 +1,6 @@
 package com.mangotrade.tests;
 
+import com.mangotrade.config.Project;
 import com.mangotrade.helpers.DriverUtils;
 import io.qameta.allure.Description;
 import io.qameta.allure.Feature;
@@ -22,8 +23,8 @@ public class LoginPage extends TestBase {
     @DisplayName("Login form has form header 'Log In'")
     void checkLoginFormHeader() {
         step("Open url 'https://trade.mangotrade.com/en/login'", () ->
-                open("https://trade.mangotrade.com/en/login"));
-
+                open("/en/login"));
+        sleep(3000);
         step("Check login header form", () -> {
             step("Check form header -> should be 'Log In'", () -> {
                 $(".css-1ffs9d1.e131aulr0").shouldHave(exactText("Log In"));
@@ -31,7 +32,14 @@ public class LoginPage extends TestBase {
         });
     }
 
-    @Test
+   /* @Test
+    @DisplayName("assertj api token test")
+    void apiTokenTest() {
+        System.setProperty("apitoken","some_token");
+        assertThat(Project.config.apiToken()).isEqualTo("new_token");
+    }*/
+
+   /* @Test
     @Feature("Login page functional tests")
     @Description("Login test 1")
     @DisplayName("Success login to account")
@@ -184,5 +192,5 @@ public class LoginPage extends TestBase {
                 $(".RegisterFormContainer").$("h1").shouldHave(exactText("Sign Up"));
             });
         });
-    }
+    }*/
 }

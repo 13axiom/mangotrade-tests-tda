@@ -1,5 +1,6 @@
 package com.mangotrade.tests;
 
+import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import com.mangotrade.config.Project;
@@ -15,14 +16,15 @@ import org.junit.jupiter.api.extension.ExtendWith;
 
 @ExtendWith({AllureJunit5.class})
 public class TestBase {
-    @BeforeAll
+
+   @BeforeAll
     static void setUp() {
-        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
-        DriverSettings.configure();
-    }
+       SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
+       DriverSettings.configure();
+   }
 
 
-
+/*
     @AfterEach
     public void addAttachments() {
         String sessionId = DriverUtils.getSessionId();
@@ -37,5 +39,5 @@ public class TestBase {
         if (Project.isVideoOn()) {
             AllureAttachments.addVideo(sessionId);
         }
-    }
+    }*/
 }
