@@ -11,7 +11,8 @@ import java.util.Map;
 public class DriverSettings {
 
     public static void configure() {
-        System.setProperty("url","mango");//todo работает отсюда, но из консоли не позволяет менять проперти файл, че за нах?
+       // System.setProperty("url","mango");//todo работает отсюда, но из консоли не позволяет менять проперти файл, че за нах?
+        System.getProperty("url","mango");
 
         Configuration.browser = Project.config.browser();
         Configuration.browserVersion = Project.config.browserVersion();
