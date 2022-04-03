@@ -31,5 +31,4 @@ public interface ProjectConfig extends Config {
     @Key("apitoken")
     String apiToken();
 
-
 }
