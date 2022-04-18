@@ -1,12 +1,12 @@
 package com.mangotrade.tests;
 
 import com.mangotrade.helpers.DriverUtils;
-import io.qameta.allure.Description;
-import io.qameta.allure.Feature;
+import io.qameta.allure.*;
 import io.qameta.allure.restassured.AllureRestAssured;
 import models.LoginData;
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.exactText;
@@ -195,6 +195,9 @@ public class LoginPage extends TestBase {
     }
 
     @Test
+    @Tag("api_test")
+    @Owner("DmitriyTQC")
+    @Severity(SeverityLevel.NORMAL)
     @Feature("Login page api-functional tests")
     @Description("Rest API test 1")
     @DisplayName("Success login to account(API test)")
