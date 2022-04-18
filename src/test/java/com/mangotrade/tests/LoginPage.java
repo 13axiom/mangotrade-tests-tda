@@ -12,6 +12,7 @@ import org.junit.jupiter.api.Test;
 import static com.codeborne.selenide.Condition.exactText;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
+import static com.mangotrade.helpers.AllureRestAssuredFilter.withCustomTemplates;
 import static io.qameta.allure.Allure.step;
 import static io.restassured.RestAssured.given;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -196,7 +197,7 @@ public class LoginPage extends TestBase {
     @Test
     @Feature("Login page api-functional tests")
     @Description("Rest API test 1")
-    @DisplayName("Success login to account")
+    @DisplayName("Success login to account(API test)")
     void successLoginViaRestAPI() {
         open();//todo костыль, потому что в beforeall вызывается вебдрайвер и он ожидает урл
         LoginData data = new LoginData();
@@ -204,7 +205,8 @@ public class LoginPage extends TestBase {
         data.setPassword("Test1234");
 
         given()
-                .filter(new AllureRestAssured())
+                //.filter(new AllureRestAssured())
+                .filter(withCustomTemplates())
                 .contentType("application/json")
                 .cookie("platform=90; " +
                         "lang=en_US; " +
