@@ -2,6 +2,7 @@ package com.mangotrade.helpers;
 
 import com.mangotrade.config.Project;
 import com.codeborne.selenide.Configuration;
+import io.restassured.RestAssured;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
@@ -12,14 +13,15 @@ public class DriverSettings {
 
     public static void configure() {
         //System.setProperty("url","mango");//todo работает отсюда, но из консоли не позволяет менять проперти файл, че за нах?
-        //System.getProperty("url","mango");
-        System.setProperty("url",System.getProperty("url","mango"));
+        System.getProperty("url","mango");
+        //System.setProperty("url",System.getProperty("url","mango"));
 
         Configuration.browser = Project.config.browser();
         Configuration.browserVersion = Project.config.browserVersion();
         Configuration.browserSize = Project.config.browserSize();
 
         Configuration.baseUrl = Project.config.webUrl();
+        RestAssured.baseURI = Project.config.restUrl();
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         ChromeOptions chromeOptions = new ChromeOptions();

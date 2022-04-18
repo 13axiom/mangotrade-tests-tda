@@ -31,4 +31,7 @@ public interface ProjectConfig extends Config {
     @Key("apitoken")
     String apiToken();
 
+    @Key("restbaseurl")
+    String restUrl();
+
 }

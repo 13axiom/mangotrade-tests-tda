@@ -24,7 +24,7 @@ public class TestBase {
    }
 
 
-/*
+
     @AfterEach
     public void addAttachments() {
         String sessionId = DriverUtils.getSessionId();
@@ -39,5 +39,5 @@ public class TestBase {
         if (Project.isVideoOn()) {
             AllureAttachments.addVideo(sessionId);
         }
-    }*/
+    }
 }
