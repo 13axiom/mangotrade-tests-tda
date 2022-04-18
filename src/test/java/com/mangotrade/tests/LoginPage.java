@@ -58,8 +58,10 @@ public class LoginPage extends TestBase {
 
         step("Click button \"Log in\"", () -> {
             $("[data-test-id=login-submit-button]").click();
-            sleep(5000);
+            sleep(10000);
         });
+
+        sleep(10000);//todo delete?
 
         step("Redirect to 'https://trade.mangotrade.com/traderoom'", () -> {
             String currURL = DriverUtils.getCurrUrl();
@@ -183,10 +185,12 @@ public class LoginPage extends TestBase {
 
         step("Check redirect to registration form", () -> {
             step("Check link", () -> {
-                sleep(5000);
+                sleep(10000);
                 String currURL = DriverUtils.getCurrUrl();
-                assertEquals("/en/register", currURL);
+                assertEquals("https://trade.mangotrade.com/en/register", currURL);
             });
+
+            sleep(10000);//todo delete?
 
             step("Check form header -> should be 'Sing Up'", () -> {
                 $(".RegisterFormContainer").$("h1").shouldHave(exactText("Sign Up"));
@@ -200,7 +204,7 @@ public class LoginPage extends TestBase {
     @Severity(SeverityLevel.NORMAL)
     @Feature("Login page api-functional tests")
     @Description("Rest API test 1")
-    @DisplayName("Success login to account(API test)")
+    @DisplayName("Success login to account (API test)")
     void successLoginViaRestAPI() {
         open();//todo костыль, потому что в beforeall вызывается вебдрайвер и он ожидает урл
         LoginData data = new LoginData();
