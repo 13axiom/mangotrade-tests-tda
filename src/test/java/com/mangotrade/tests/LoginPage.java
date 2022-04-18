@@ -208,7 +208,6 @@ public class LoginPage extends TestBase {
         data.setPassword("Test1234");
 
         given()
-                //.filter(new AllureRestAssured())
                 .filter(withCustomTemplates())
                 .contentType("application/json")
                 .cookie("platform=90; " +
@@ -234,28 +233,47 @@ public class LoginPage extends TestBase {
 --header 'Cookie: device_id=3YGp1PaZcCkiO7zazNa2; web_rules=; init_url=https://trade.mangotrade.com/en/login; platform=90; landing=trade.mangotrade.com; lang=en_US; pll_language=en; _gcl_au=1.1.1465944008.1650311546; _ga_BH1SENMS6L=GS1.1.1650311546.1.1.1650311693.0; _ga=GA1.2.2130918845.1650311546; _ym_uid=1650311547675546183; _ym_d=1650311547; _ym_visorc=b; _ym_isad=2; _fbp=fb.1.1650311547145.1764646748; afUserId=c7bb0519-2087-48b0-b307-4b61610965cb-p; AF_SYNC=1650311547841; _gid=GA1.2.1131175257.1650311548; platform_version=2446.5.0946.release; referrer=https://trade.mangotrade.com/traderoom; ssid=054fa7be0f836899ee76da4c7aca8bb8' \
 --data-raw '{"identifier":"mnenie@bk.ru","password":"Test1234"}'
         */
+    }
 
-       /* step("Open 'https://trade.mangotrade.com/en/login'", () -> {
-            open("/api/v2/login");
-        });
+    @Test
+    @Tag("api_test")
+    @Owner("DmitriyTQC")
+    @Severity(SeverityLevel.NORMAL)
+    @Feature("Login page api-functional tests")
+    @Description("Rest API test 2")
+    @DisplayName("Success login to account WithoutCustomAllureTemplate (API test)")
+    void DublicatedSuccessLoginViaRestAPIWithoutCustomAllureTemplate() {
+        open();//todo костыль, потому что в beforeall вызывается вебдрайвер и он ожидает урл
+        LoginData data = new LoginData();
+        data.setIdentifier("mnenie@bk.ru");
+        data.setPassword("Test1234");
 
-        step("Set email 'mnn'", () -> {
-            $("[name=identifier]").setValue("mnenie@bk.ru");
-        });
+        given()
+                .filter(new AllureRestAssured())
+                .contentType("application/json")
+                .cookie("platform=90; " +
+                        "lang=en_US; " +
+                        "ssid=054fa7be0f836899ee76da4c7aca8bb8")
+                .header("Connection", "keep-alive")
+                .body(data)
+                .log().uri()
+                .log().body()
+                .when()
+                .post("/api/v2/login")
+                .then()
+                .log().status()
+                .log().body()
+                .statusCode(200)
+                .body("code", is("success"))
+                .body("ssid", Matchers.is(notNullValue()));
 
-        step("Set password 'Test123'", () -> {
-            $("[name=password]").setValue("Test1234");
-        });
-
-        step("Click button \"Log in\"", () -> {
-            $("[data-test-id=login-submit-button]").click();
-            sleep(5000);
-        });
-
-        step("Redirect to 'https://trade.mangotrade.com/traderoom'", () -> {
-            String currURL = DriverUtils.getCurrUrl();
-            assertEquals("https://trade.mangotrade.com/traderoom", currURL);
-        });*/
+        /*
+        curl --location --request POST 'https://auth.trade.mangotrade.com/api/v2/login' \
+--header 'Content-Type: application/json' \
+--header 'Connection: keep-alive' \
+--header 'Cookie: device_id=3YGp1PaZcCkiO7zazNa2; web_rules=; init_url=https://trade.mangotrade.com/en/login; platform=90; landing=trade.mangotrade.com; lang=en_US; pll_language=en; _gcl_au=1.1.1465944008.1650311546; _ga_BH1SENMS6L=GS1.1.1650311546.1.1.1650311693.0; _ga=GA1.2.2130918845.1650311546; _ym_uid=1650311547675546183; _ym_d=1650311547; _ym_visorc=b; _ym_isad=2; _fbp=fb.1.1650311547145.1764646748; afUserId=c7bb0519-2087-48b0-b307-4b61610965cb-p; AF_SYNC=1650311547841; _gid=GA1.2.1131175257.1650311548; platform_version=2446.5.0946.release; referrer=https://trade.mangotrade.com/traderoom; ssid=054fa7be0f836899ee76da4c7aca8bb8' \
+--data-raw '{"identifier":"mnenie@bk.ru","password":"Test1234"}'
+        */
     }
 
 }
