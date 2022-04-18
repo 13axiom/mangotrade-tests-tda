@@ -5,18 +5,40 @@ import org.aeonbits.owner.Config;
 @Config.LoadPolicy(Config.LoadType.MERGE)
 @Config.Sources({
         "system:properties",
-        "classpath:config/local.properties",
+        "classpath:config/${url}.properties",
         "classpath:config/remote.properties"
 })
 public interface ProjectConfig extends Config {
 
+    @Key("browserMobileView")
+    @DefaultValue("")
+    String browserMobileView();
+
+    @Key("remoteDriverUrl")
+    @DefaultValue("")
+    String remoteDriverUrl();
+
+    @Key("videoStorage")
+    @DefaultValue("")
+    String videoStorage();
+
+    @Key("baseurl")
+    @DefaultValue("https://trade.mangotrade.com/")
+    String webUrl();
+
+    @Key("browser")
     @DefaultValue("chrome")
     String browser();
-    @DefaultValue("91.0")
-    String browserVersion();
-    @DefaultValue("1920x1080")
+
+    @Key("browser.size")
+    @DefaultValue("3840x2160")
     String browserSize();
-    String browserMobileView();
-    String remoteDriverUrl();
-    String videoStorage();
+
+    @Key("browser.version")
+    @DefaultValue("100.0")
+    String browserVersion();
+
+    @Key("restbaseurl")
+    @DefaultValue("https://auth.trade.mangotrade.com")
+    String restUrl();
 }
