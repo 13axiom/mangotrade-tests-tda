@@ -4,6 +4,7 @@ import org.aeonbits.owner.Config;
 
 @Config.LoadPolicy(Config.LoadType.MERGE)
 @Config.Sources({
+        "file:/tmp/remote.properties",
         "system:properties",
         "classpath:config/${url}.properties",
         "classpath:config/remote.properties"

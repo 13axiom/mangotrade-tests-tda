@@ -4,6 +4,7 @@ import org.aeonbits.owner.Config;
 
 @Config.LoadPolicy(Config.LoadType.MERGE)
 @Config.Sources({
+        "file:/tmp/user_data.properties",
         "system:properties",
         "classpath:config/user_data.properties"
 })
