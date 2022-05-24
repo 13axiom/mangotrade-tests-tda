@@ -2,6 +2,7 @@ package com.mangotrade.tests;
 
 import com.codeborne.selenide.Configuration;
 import com.mangotrade.config.Project;
+import io.qameta.allure.Step;
 import io.restassured.RestAssured;
 import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.http.ContentType;
@@ -36,7 +37,6 @@ public class Specs {
             .expectStatusCode(200)
             .expectBody("code", is("success"))
             .expectBody("ssid", is(notNullValue()))
-//            .expectBody(containsString("success"))
             .build();
 
     public static ResponseSpecification failedResponseSpec = new ResponseSpecBuilder()
@@ -44,6 +44,5 @@ public class Specs {
             .expectBody("code", is("invalid_credentials"))
             .expectBody("message", is("You entered the wrong credentials. " +
                     "Please ensure that your login/password is correct."))
-//            .expectBody(containsString("success"))
             .build();
 }
