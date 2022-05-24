@@ -41,4 +41,5 @@ public interface ProjectConfig extends Config {
     @Key("restbaseurl")
     @DefaultValue("https://auth.trade.mangotrade.com")
     String restUrl();
+
 }

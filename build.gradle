@@ -28,6 +28,7 @@ allure {
 
 dependencies {
     testImplementation(
+            "com.github.javafaker:javafaker:1.0.2",
             "org.aspectj:aspectjweaver:1.9.6",
             "com.codeborne:selenide:$selenideVersion",
             "io.qameta.allure:allure-selenide:$allureVersion",
@@ -72,9 +73,9 @@ tasks.withType(Test) {
     }
 }
 
-
+/*
 task api_test(type: Test) {
     useJUnitPlatform {
         includeTags "api_test"
     }
-}
+}*/
