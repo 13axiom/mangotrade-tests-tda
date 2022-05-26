@@ -1,13 +1,9 @@
 package com.mangotrade.actions;
 
-import com.mangotrade.config.Project;
 import io.qameta.allure.Step;
 import io.qameta.allure.restassured.AllureRestAssured;
 import io.restassured.response.Response;
-import models.LoginData;
 
-import static com.mangotrade.tests.Specs.request;
-import static com.mangotrade.tests.Specs.successResponseSpec;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.is;
 import static org.junit.jupiter.api.Assertions.assertEquals;

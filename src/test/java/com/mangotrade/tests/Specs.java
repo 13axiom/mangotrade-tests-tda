@@ -1,19 +1,10 @@
 package com.mangotrade.tests;
 
-import com.codeborne.selenide.Configuration;
 import com.mangotrade.config.Project;
-import io.qameta.allure.Step;
-import io.restassured.RestAssured;
 import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
-import org.hamcrest.Matchers;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.remote.DesiredCapabilities;
-
-import java.util.HashMap;
-import java.util.Map;
 
 import static com.mangotrade.helpers.AllureRestAssuredFilter.withCustomTemplates;
 import static io.restassured.RestAssured.with;

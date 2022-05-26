@@ -5,13 +5,8 @@ import io.qameta.allure.Step;
 import io.restassured.response.Response;
 import models.LoginData;
 
-import static org.hamcrest.Matchers.is;
-
-
-import static com.mangotrade.tests.Specs.*;
+import static com.mangotrade.tests.Specs.request;
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.core.IsNull.notNullValue;
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class AuthActions {
 
@@ -27,7 +22,7 @@ public class AuthActions {
                 .when()
                 .post("/api/v2/login")
                 .then()
-                .extract().response();;
+                .extract().response();
 
         return auth;
 

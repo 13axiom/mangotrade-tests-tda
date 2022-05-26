@@ -1,10 +1,7 @@
 package com.mangotrade.tests;
 
 import com.github.javafaker.Faker;
-import io.qameta.allure.Feature;
-import io.qameta.allure.Owner;
-import io.qameta.allure.Severity;
-import io.qameta.allure.SeverityLevel;
+import io.qameta.allure.*;
 import org.junit.jupiter.api.*;
 import pages.SingUpPage;
 
@@ -30,6 +27,7 @@ public class SingUpTests extends TestBaseUI {
 
 
     @Test
+    @AllureId("10270")
     @Tags({@Tag("negative"), @Tag("registration"), @Tag("ui"), @Tag("singup")})
     @Owner("DmitriyTQC")
     @Severity(SeverityLevel.CRITICAL)
@@ -48,6 +46,7 @@ public class SingUpTests extends TestBaseUI {
     }
 
     @Test
+    @AllureId("10267")
     @Tags({@Tag("negative"), @Tag("registration"), @Tag("ui"), @Tag("singup")})
     @Owner("DmitriyTQC")
     @Severity(SeverityLevel.NORMAL)
@@ -67,6 +66,7 @@ public class SingUpTests extends TestBaseUI {
     }
 
     @Test
+    @AllureId("10262")
     @Tags({@Tag("negative"), @Tag("registration"), @Tag("ui"), @Tag("singup")})
     @Owner("DmitriyTQC")
     @Severity(SeverityLevel.NORMAL)
@@ -85,6 +85,7 @@ public class SingUpTests extends TestBaseUI {
     }
 
     @Test
+    @AllureId("10258")
     @Tags({@Tag("positive"), @Tag("registration"), @Tag("ui"), @Tag("singup")})
     @Owner("DmitriyTQC")
     @Severity(SeverityLevel.CRITICAL)
@@ -98,6 +99,7 @@ public class SingUpTests extends TestBaseUI {
     }
 
     @Test
+    @AllureId("10269")
     @Tags({@Tag("positive"), @Tag("registration"), @Tag("ui"), @Tag("singup")})
     @Owner("DmitriyTQC")
     @Severity(SeverityLevel.NORMAL)
@@ -111,6 +113,7 @@ public class SingUpTests extends TestBaseUI {
     }
 
     @Test
+    @AllureId("10265")
     @Tags({@Tag("positive"), @Tag("registration"), @Tag("ui"), @Tag("singup")})
     @Owner("DmitriyTQC")
     @Severity(SeverityLevel.NORMAL)
@@ -124,6 +127,7 @@ public class SingUpTests extends TestBaseUI {
     }
 
     @Test
+    @AllureId("10260")
     @Tags({@Tag("negative"), @Tag("registration"), @Tag("ui"), @Tag("singup")})
     @Owner("DmitriyTQC")
     @Severity(SeverityLevel.NORMAL)
@@ -137,6 +141,7 @@ public class SingUpTests extends TestBaseUI {
     }
 
     @Test
+    @AllureId("10268")
     @Tags({@Tag("positive"), @Tag("registration"), @Tag("ui"), @Tag("singup")})
     @Owner("DmitriyTQC")
     @Severity(SeverityLevel.NORMAL)
@@ -150,6 +155,7 @@ public class SingUpTests extends TestBaseUI {
     }
 
     @Test
+    @AllureId("10271")
     @Tags({@Tag("positive"), @Tag("registration"), @Tag("ui"), @Tag("singup")})
     @Owner("DmitriyTQC")
     @Severity(SeverityLevel.NORMAL)
@@ -163,6 +169,7 @@ public class SingUpTests extends TestBaseUI {
     }
 
     @Test
+    @AllureId("10273")
     @Tags({@Tag("negative"), @Tag("registration"), @Tag("ui"), @Tag("singup")})
     @Owner("DmitriyTQC")
     @Severity(SeverityLevel.CRITICAL)
@@ -182,6 +189,7 @@ public class SingUpTests extends TestBaseUI {
     }
 
     @Test
+    @AllureId("10259")
     @Tags({@Tag("negative"), @Tag("registration"), @Tag("ui"), @Tag("singup")})
     @Owner("DmitriyTQC")
     @Severity(SeverityLevel.NORMAL)
@@ -201,6 +209,7 @@ public class SingUpTests extends TestBaseUI {
     }
 
     @Test
+    @AllureId("10253")
     @Tags({@Tag("disabled"), @Tag("registration"), @Tag("ui"), @Tag("singup")})
     @Owner("DmitriyTQC")
     @Severity(SeverityLevel.TRIVIAL)
@@ -213,6 +222,7 @@ public class SingUpTests extends TestBaseUI {
     }
 
     @Test
+    @AllureId("10272")
     @Tags({@Tag("failed"), @Tag("registration"), @Tag("ui"), @Tag("singup")})
     @Owner("DmitriyTQC")
     @Severity(SeverityLevel.MINOR)
@@ -224,6 +234,7 @@ public class SingUpTests extends TestBaseUI {
     }
 
     @Test
+    @AllureId("10264")
     @Tags({@Tag("positive"), @Tag("registration"), @Tag("ui"), @Tag("singup")})
     @Owner("DmitriyTQC")
     @Severity(SeverityLevel.NORMAL)
@@ -237,6 +248,7 @@ public class SingUpTests extends TestBaseUI {
 
 
     @Test
+    @AllureId("10266")
     @Tags({@Tag("positive"), @Tag("registration"), @Tag("ui"), @Tag("singup")})
     @Owner("DmitriyTQC")
     @Severity(SeverityLevel.CRITICAL)
@@ -248,6 +260,7 @@ public class SingUpTests extends TestBaseUI {
     }
 
     @Test
+    @AllureId("10261")
     @Tags({@Tag("positive"), @Tag("registration"), @Tag("ui"), @Tag("singup")})
     @Owner("DmitriyTQC")
     @Severity(SeverityLevel.NORMAL)
@@ -260,6 +273,7 @@ public class SingUpTests extends TestBaseUI {
     }
 
     @Test
+    @AllureId("10263")
     @Tags({@Tag("positive"), @Tag("registration"), @Tag("ui"), @Tag("singup")})
     @Owner("DmitriyTQC")
     @Severity(SeverityLevel.NORMAL)

@@ -16,6 +16,7 @@ import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInC
 public class UserProfileTests {
 
     @Test
+    @AllureId("10251")
     @Tags({@Tag("positive"), @Tag("user_profile"), @Tag("rest_api"), @Tag("profile")})
     @Owner("DmitriyTQC")
     @Severity(SeverityLevel.NORMAL)

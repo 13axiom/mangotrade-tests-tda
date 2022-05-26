@@ -22,7 +22,6 @@ public class TestBaseUI {
     }
 
 
-
     @AfterEach
     public void addAttachments() {
         String sessionId = DriverUtils.getSessionId();

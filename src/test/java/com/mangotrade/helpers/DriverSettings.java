@@ -1,7 +1,7 @@
 package com.mangotrade.helpers;
 
-import com.mangotrade.config.Project;
 import com.codeborne.selenide.Configuration;
+import com.mangotrade.config.Project;
 import io.restassured.RestAssured;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;

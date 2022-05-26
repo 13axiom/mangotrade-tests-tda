@@ -16,6 +16,7 @@ public class AuthTests {
     CheckAnswerAction checkAnswerAction = new CheckAnswerAction();
 
     @Test
+    @AllureId("10252")
     @Tags({@Tag("positive"), @Tag("login"), @Tag("rest_api"), @Tag("singin")})
     @Owner("DmitriyTQC")
     @Severity(SeverityLevel.CRITICAL)
@@ -29,6 +30,7 @@ public class AuthTests {
     }
 
     @Test
+    @AllureId("10254")
     @Tags({@Tag("negative"), @Tag("login"), @Tag("rest_api"), @Tag("singin")})
     @Owner("DmitriyTQC")
     @Severity(SeverityLevel.CRITICAL)
@@ -42,6 +44,7 @@ public class AuthTests {
     }
 
     @Test
+    @AllureId("10257")
     @Tags({@Tag("negative"), @Tag("login"), @Tag("rest_api"), @Tag("singin")})
     @Owner("DmitriyTQC")
     @Severity(SeverityLevel.CRITICAL)
@@ -56,6 +59,7 @@ public class AuthTests {
     }
 
     @Test
+    @AllureId("10256")
     @Tags({@Tag("negative"), @Tag("login"), @Tag("rest_api"), @Tag("singin")})
     @Owner("DmitriyTQC")
     @Severity(SeverityLevel.CRITICAL)
@@ -70,6 +74,7 @@ public class AuthTests {
     }
 
     @Test
+    @AllureId("10255")
     @Tags({@Tag("negative"), @Tag("login"), @Tag("rest_api"), @Tag("singin")})
     @Owner("DmitriyTQC")
     @Severity(SeverityLevel.CRITICAL)
