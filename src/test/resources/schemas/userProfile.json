@@ -1,0 +1,518 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "isSuccessful": {
+      "type": "boolean"
+    },
+    "message": {
+      "type": "array",
+      "items": {},
+      "additionalItems": true
+    },
+    "result": {
+      "type": "object",
+      "properties": {
+        "account_status": {
+          "type": "string"
+        },
+        "address": {
+          "type": "string"
+        },
+        "auth_two_factor": {
+          "type": "null"
+        },
+        "avatar": {
+          "type": "string"
+        },
+        "balance": {
+          "type": "integer"
+        },
+        "balance_id": {
+          "type": "integer"
+        },
+        "balance_type": {
+          "type": "integer"
+        },
+        "balances": {
+          "type": "array",
+          "items": {},
+          "additionalItems": true
+        },
+        "birthdate": {
+          "type": "boolean"
+        },
+        "bonus_total_wager": {
+          "type": "integer"
+        },
+        "bonus_wager": {
+          "type": "integer"
+        },
+        "cashback_level_info": {
+          "type": "object",
+          "properties": {
+            "enabled": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "enabled"
+          ]
+        },
+        "city": {
+          "type": "string"
+        },
+        "client_category_id": {
+          "type": "integer"
+        },
+        "company_id": {
+          "type": "integer"
+        },
+        "confirmation_required": {
+          "type": "integer"
+        },
+        "confirmed_phones": {
+          "type": "array",
+          "items": {},
+          "additionalItems": true
+        },
+        "country_id": {
+          "type": "integer"
+        },
+        "created": {
+          "type": "integer"
+        },
+        "currency": {
+          "type": "string"
+        },
+        "currency_char": {
+          "type": "string"
+        },
+        "currency_id": {
+          "type": "integer"
+        },
+        "demo": {
+          "type": "integer"
+        },
+        "deposit_count": {
+          "type": "integer"
+        },
+        "deposit_in_one_click": {
+          "type": "boolean"
+        },
+        "email": {
+          "type": "string"
+        },
+        "finance_state": {
+          "type": "string"
+        },
+        "first_name": {
+          "type": "string"
+        },
+        "flag": {
+          "type": "string"
+        },
+        "forget_status": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "type": "string"
+            },
+            "created": {
+              "type": "null"
+            },
+            "expires": {
+              "type": "null"
+            }
+          },
+          "required": [
+            "status",
+            "created",
+            "expires"
+          ]
+        },
+        "functions": {
+          "type": "array",
+          "items": {},
+          "additionalItems": true
+        },
+        "gender": {
+          "type": "string"
+        },
+        "group_id": {
+          "type": "integer"
+        },
+        "id": {
+          "type": "integer"
+        },
+        "infeed": {
+          "type": "integer"
+        },
+        "is_activated": {
+          "type": "boolean"
+        },
+        "is_islamic": {
+          "type": "boolean"
+        },
+        "is_vip_group": {
+          "type": "boolean"
+        },
+        "kyc": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "type": "integer"
+            },
+            "isPhoneFilled": {
+              "type": "boolean"
+            },
+            "isPhoneNeeded": {
+              "type": "boolean"
+            },
+            "isProfileFilled": {
+              "type": "boolean"
+            },
+            "isProfileNeeded": {
+              "type": "boolean"
+            },
+            "isRegulatedUser": {
+              "type": "boolean"
+            },
+            "daysLeftToVerify": {
+              "type": "integer"
+            },
+            "isPhoneConfirmed": {
+              "type": "boolean"
+            },
+            "isDocumentsNeeded": {
+              "type": "boolean"
+            },
+            "isDocumentsApproved": {
+              "type": "boolean"
+            },
+            "isDocumentsDeclined": {
+              "type": "boolean"
+            },
+            "isDocumentsUploaded": {
+              "type": "boolean"
+            },
+            "isDocumentPoaUploaded": {
+              "type": "boolean"
+            },
+            "isDocumentPoiUploaded": {
+              "type": "boolean"
+            },
+            "isDocumentsUploadSkipped": {
+              "type": "boolean"
+            },
+            "isPhoneConfirmationSkipped": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "status",
+            "isPhoneFilled",
+            "isPhoneNeeded",
+            "isProfileFilled",
+            "isProfileNeeded",
+            "isRegulatedUser",
+            "daysLeftToVerify",
+            "isPhoneConfirmed",
+            "isDocumentsNeeded",
+            "isDocumentsApproved",
+            "isDocumentsDeclined",
+            "isDocumentsUploaded",
+            "isDocumentPoaUploaded",
+            "isDocumentPoiUploaded",
+            "isDocumentsUploadSkipped",
+            "isPhoneConfirmationSkipped"
+          ]
+        },
+        "kyc_confirmed": {
+          "type": "boolean"
+        },
+        "last_name": {
+          "type": "string"
+        },
+        "last_visit": {
+          "type": "boolean"
+        },
+        "locale": {
+          "type": "string"
+        },
+        "mask": {
+          "type": "string"
+        },
+        "messages": {
+          "type": "integer"
+        },
+        "money": {
+          "type": "object",
+          "properties": {
+            "deposit": {
+              "type": "object",
+              "properties": {
+                "min": {
+                  "type": "integer"
+                },
+                "max": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "min",
+                "max"
+              ]
+            },
+            "withdraw": {
+              "type": "object",
+              "properties": {
+                "min": {
+                  "type": "integer"
+                },
+                "max": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "min",
+                "max"
+              ]
+            }
+          },
+          "required": [
+            "deposit",
+            "withdraw"
+          ]
+        },
+        "name": {
+          "type": "string"
+        },
+        "nationality": {
+          "type": "string"
+        },
+        "need_phone_confirmation": {
+          "type": "null"
+        },
+        "new_email": {
+          "type": "string"
+        },
+        "nickname": {
+          "type": "string"
+        },
+        "personal_data_policy": {
+          "type": "object",
+          "properties": {
+            "is_call_accepted": {
+              "type": "object",
+              "properties": {
+                "status": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "status"
+              ]
+            },
+            "is_push_accepted": {
+              "type": "object",
+              "properties": {
+                "status": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "status"
+              ]
+            },
+            "is_email_accepted": {
+              "type": "object",
+              "properties": {
+                "status": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "status"
+              ]
+            },
+            "is_agreement_accepted": {
+              "type": "object",
+              "properties": {
+                "status": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "status"
+              ]
+            },
+            "is_thirdparty_accepted": {
+              "type": "object",
+              "properties": {
+                "status": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "status"
+              ]
+            }
+          },
+          "required": [
+            "is_call_accepted",
+            "is_push_accepted",
+            "is_email_accepted",
+            "is_agreement_accepted",
+            "is_thirdparty_accepted"
+          ]
+        },
+        "phone": {
+          "type": "string"
+        },
+        "popup": {
+          "type": "array",
+          "items": {},
+          "additionalItems": true
+        },
+        "postal_index": {
+          "type": "string"
+        },
+        "public": {
+          "type": "integer"
+        },
+        "rate_in_one_click": {
+          "type": "boolean"
+        },
+        "site_id": {
+          "type": "integer"
+        },
+        "skey": {
+          "type": "string"
+        },
+        "socials": {
+          "type": "object"
+        },
+        "ssid": {
+          "type": "boolean"
+        },
+        "tc": {
+          "type": "boolean"
+        },
+        "timediff": {
+          "type": "integer"
+        },
+        "tin": {
+          "type": "string"
+        },
+        "tournaments_ids": {
+          "type": "null"
+        },
+        "trade_restricted": {
+          "type": "boolean"
+        },
+        "trial": {
+          "type": "boolean"
+        },
+        "tz": {
+          "type": "string"
+        },
+        "tz_offset": {
+          "type": "integer"
+        },
+        "user_circle": {
+          "type": "null"
+        },
+        "user_group": {
+          "type": "string"
+        },
+        "user_id": {
+          "type": "integer"
+        },
+        "welcome_splash": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "account_status",
+        "address",
+        "auth_two_factor",
+        "avatar",
+        "balance",
+        "balance_id",
+        "balance_type",
+        "balances",
+        "birthdate",
+        "bonus_total_wager",
+        "bonus_wager",
+        "cashback_level_info",
+        "city",
+        "client_category_id",
+        "company_id",
+        "confirmation_required",
+        "confirmed_phones",
+        "country_id",
+        "created",
+        "currency",
+        "currency_char",
+        "currency_id",
+        "demo",
+        "deposit_count",
+        "deposit_in_one_click",
+        "email",
+        "finance_state",
+        "first_name",
+        "flag",
+        "forget_status",
+        "functions",
+        "gender",
+        "group_id",
+        "id",
+        "infeed",
+        "is_activated",
+        "is_islamic",
+        "is_vip_group",
+        "kyc",
+        "kyc_confirmed",
+        "last_name",
+        "last_visit",
+        "locale",
+        "mask",
+        "messages",
+        "money",
+        "name",
+        "nationality",
+        "need_phone_confirmation",
+        "new_email",
+        "nickname",
+        "personal_data_policy",
+        "phone",
+        "popup",
+        "postal_index",
+        "public",
+        "rate_in_one_click",
+        "site_id",
+        "skey",
+        "socials",
+        "ssid",
+        "tc",
+        "timediff",
+        "tin",
+        "tournaments_ids",
+        "trade_restricted",
+        "trial",
+        "tz",
+        "tz_offset",
+        "user_circle",
+        "user_group",
+        "user_id",
+        "welcome_splash"
+      ]
+    }
+  },
+  "required": [
+    "isSuccessful",
+    "message",
+    "result"
+  ]
+}

@@ -39,7 +39,7 @@ dependencies {
             "io.rest-assured:rest-assured:5.0.1",
             "org.slf4j:slf4j-simple:1.7.36",
             'com.google.code.gson:gson:2.9.0',
-            "io.rest-assured:json-schema-validator:3.0.0",
+            "io.rest-assured:json-schema-validator:5.0.1",
             "io.qameta.allure:allure-rest-assured:$allureVersion",
     )
 }
