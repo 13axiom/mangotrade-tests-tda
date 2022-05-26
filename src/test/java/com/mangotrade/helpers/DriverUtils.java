@@ -1,7 +1,7 @@
 package com.mangotrade.helpers;
 
-import com.mangotrade.config.Project;
 import com.codeborne.selenide.Selenide;
+import com.mangotrade.config.Project;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.remote.RemoteWebDriver;

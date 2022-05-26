@@ -1,7 +1,8 @@
 package com.mangotrade.helpers;
 
-import com.mangotrade.config.Project;
 import com.codeborne.selenide.Configuration;
+import com.mangotrade.config.Project;
+import io.restassured.RestAssured;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
@@ -11,10 +12,13 @@ import java.util.Map;
 public class DriverSettings {
 
     public static void configure() {
+        System.getProperty("url", "mango");
         Configuration.browser = Project.config.browser();
         Configuration.browserVersion = Project.config.browserVersion();
         Configuration.browserSize = Project.config.browserSize();
-//        Configuration.baseUrl = App.config.webUrl();
+        Configuration.baseUrl = Project.config.webUrl();
+        RestAssured.baseURI = Project.config.restUrl();
+
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         ChromeOptions chromeOptions = new ChromeOptions();

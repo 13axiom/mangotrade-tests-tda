@@ -4,7 +4,6 @@
 ## :bulb: Content:
 
 - [Implemented automated checks](#white_check_mark-Implemented-automated-checks)
-- [Implemented manual checks](#hand-Implemented-manual-checks)
 - [Scheduled to automate checks](#soon-Scheduled-to-automate-checks)
 - [Technology stack](#gear-Technology-stack)
 - [Tests launch from Terminal](#Tests-launch-from-Terminal)
@@ -17,22 +16,9 @@
 ___
 
 ## :white_check_mark: Implemented automated checks
-- [x] Success login to account
-- [x] Failed login with null data
-- [x] Failed login without Email
-- [x] Failed login without Password
-- [x] Login form has form header 'Log In'
-- [x] 'Log in' page should have warning about risks
-- [x] Page console log should not have errors
-- [x] Successful redirect to registration form
-
-## :hand: Implemented manual checks
-- [x] Success login to account by widget on main page
-
-## :soon: Scheduled to automate checks
-- [ ] api login checks
-- [ ] logut checks
-- [ ] switch language api checks
+- [x] UI Tests -> Validation of registration form
+- [x] API Tests -> Sing in
+- [x] API Tests -> User profile
 
 ## :gear: Technology stack
 <p align="center">
@@ -47,6 +33,8 @@ ___
 <a href="https://qameta.io/"><img src="images/logo/testops.png" width="50" height="50"  alt="Allure TestOps"/></a>
 <a href="https://www.jenkins.io/"><img src="images/logo/Jenkins.svg" width="50" height="50"  alt="Jenkins"/></a>
 <a href="https://telegram.org/?setln=en/"><img src="images/logo/Telegram.svg" width="50" height="50"  alt="Telegram"/></a>
+<a href="https://rest-assured.io/"><img src="images/logo/restassured.png" width="50" height="50"  alt="RestAssured"/></a>
+<a href="https://projectlombok.org/"><img src="images/logo/lombok.png" width="50" height="50"  alt="Lombok"/></a>
 </p>
 
 Current project is developing and it contains autotests written by <code>Java</code> with using <code>Selenide</code> for UI-tests.
