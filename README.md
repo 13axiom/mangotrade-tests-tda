@@ -68,6 +68,9 @@ clean
 ${TASK}
 -Dproperties=remote
 ```
+
+### :clipboard:	 Build settings
+
 > <code>TASK</code> – tag that allows to run tests separately:
 > 
 >test - all tests
@@ -75,8 +78,6 @@ ${TASK}
 >ui - ui tests
 > 
 > rest_api - api tests
-
-### :clipboard:	 Build settings
 
 > <code>-Dproperties=remote</code> - config file, which will be created when tests launch will be started.
 
