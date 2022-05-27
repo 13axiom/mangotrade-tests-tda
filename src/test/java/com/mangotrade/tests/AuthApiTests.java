@@ -11,7 +11,7 @@ import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 
 
-public class AuthTests {
+public class AuthApiTests {
     AuthActions authActions = new AuthActions();
     CheckAnswerAction checkAnswerAction = new CheckAnswerAction();
 

@@ -103,7 +103,7 @@ ___
 ## <img width="4%" title="Jenkins" src="images/logo/Jenkins.svg"> Tests launch from [Jenkins](https://jenkins.autotests.cloud/job/c11-lifetesting-mangotrade-tests-tda-diploma/)
 *For launch remote tests it's necessary to click the option <code><strong>*Собрать с параметрами*</strong></code>, then to fill build settings and to click the button <code><strong>*Собрать*</strong></code>.*
 <p align="center">
-  <img src="images/screens/jenkins_diploma1.png.png" alt="job" width="800">
+  <img src="images/screens/jenkins_diploma1.png" alt="job" width="800">
 </p>
 
 *After tests execution, in the panel <code><strong>*История сборок*</strong></code> in the row with build number
@@ -117,10 +117,10 @@ html-report in Allure Report.*
 html-report in Allure TestOps.*
 
 <p align="center">
-  <img src="images/screens/jenkins_diploma2.pngenkins.png" alt="job" width="1000">
+  <img src="images/screens/jenkins_diploma2.png" alt="job" width="1000">
 </p>
 
-## <img width="4%" title="Allure Report" src="images/logo/Allure_Report.svg"> Tests results report in [Allure Report](https://jenkins.autotests.cloud/job/c11-lifetesting-mangotrade-tests-tda/50/allure/)
+## <img width="4%" title="Allure Report" src="images/logo/Allure_Report.svg"> Tests results report in [Allure Report](https://jenkins.autotests.cloud/job/c11-lifetesting-mangotrade-tests-tda-diploma/29/allure/)
 
 ### :pushpin: Common information
 
@@ -134,21 +134,27 @@ html-report in Allure TestOps.*
 >- [x] <code><strong>*EXECUTORS*</strong></code> - displays the executor of the current build (link to Jenkins build)
 
 <p align="center">
-  <img src="images/screens/AllureReport.png" alt="Allure Report" width="900">
+  <img src="images/screens/AllureReport_diploma.png" alt="Allure Report" width="900">
 </p>
 
-## <img width="4%" title="Allure TestOPS" src="images/logo/testops.png"> [Allure TestOps](https://allure.autotests.cloud/launch/11665) integration
+## <img width="4%" title="Allure TestOPS" src="images/logo/testops.png"> [Allure TestOps](https://allure.autotests.cloud/launch/13104) integration
 
 ### :pushpin: Overview dashboard
 
 <p align="center">
-  <img src="images/screens/TestOpsOverview.png" alt="dashboards" width="900">
+  <img src="images/screens/TestOpsOverview_diploma.png" alt="dashboards" width="900">
 </p>
 
 ### :pushpin: Test cases
 
 <p align="center">
-  <img src="images/screens/TestOpsTC.png" alt="test cases" width="900">
+  <img src="images/screens/TestOpsTC_diploma.png" alt="test cases" width="900">
+</p>
+
+### :pushpin: Test launch from Allure TestOPS -> [Test Plan](https://allure.autotests.cloud/testplan/317/)
+
+<p align="center">
+  <img src="images/screens/TestOpsTestPlan_diploma.png" alt="test cases" width="900">
 </p>
 
 ## <img width="4%" title="Jira" src="images/logo/Jira.svg"> [Jira](https://jira.autotests.cloud/browse/AUTO-810) integration
@@ -162,7 +168,7 @@ html-report in Allure TestOps.*
  > After the test run is completed, created <code>Telegram</code>-bot automatically handles and sends a message with a test run report.   
 
 <p align="center">
-<img title="Telegram Notifications" src="images/screens/tgnotification.png">
+<img title="Telegram Notifications" src="images/screens/tgnotification_diploma.png">
 </p>
 
 ## <img width="4%" title="Selenoid" src="images/logo/Selenoid.svg"> Example of test execution in Selenoid
