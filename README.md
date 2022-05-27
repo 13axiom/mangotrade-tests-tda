@@ -50,7 +50,9 @@ Current project is developing and it contains autotests written by <code>Java</c
 >
 > <code>Jenkins</code> executes launch of tests.
 > After ending the test run, notifications are sent by <code>Telegram</code> bot.
-
+>
+> <code>REST-assured</code> is used sending rest api request.
+> 
 ##  Tests launch from Terminal
 
 ### :wrench: Local tests launch
@@ -63,18 +65,28 @@ gradle clean test
 
 ```
 clean
-test
--Dbrowser=${BROWSER}
--DbrowserVersion=${BROWSER_VERSION}
--DbrowserSize=${BROWSER_SIZE}
--DbrowserMobileView="${BROWSER_MOBILE}"
--DremoteDriverUrl=https://${REMOTE_DRIVER_USER}:${REMOTE_DRIVER_PASS}@${REMOTE_DRIVER_URL}/wd/hub/
--DvideoStorage=https://${REMOTE_DRIVER_URL}/video/
--Dthreads=${THREADS}
+${TASK}
+-Dproperties=remote
 ```
 
 ### :clipboard:	 Build settings
 
+> <code>-Dproperties=remote</code> - config file, which will be created when tests launch will be started.
+
+### :clipboard:	 Config file structure
+
+```
+remoteDriverUrl=https://${REMOTE_DRIVER_USER}:${REMOTE_DRIVER_PASS}@${REMOTE_DRIVER_URL}/wd/hub/
+videoStorage=https://${REMOTE_DRIVER_URL}/video/
+browser=${BROWSER}
+browser.size=${BROWSER_SIZE}
+browser.version=${BROWSER_VERSION}
+baseurl=https://trade.mangotrade.com
+restbaseurl=https://auth.trade.mangotrade.com
+```
+
+> This config file contains next setting values:
+> 
 > <code>REMOTE_DRIVER_URL</code> – remote server address, where tests will be launched.
 > 
 > <code>REMOTE_DRIVER_USER, REMOTE_DRIVER_PASS</code> - credits for remote server.
@@ -86,15 +98,12 @@ test
 > <code>BROWSER_SIZE</code> – window size of browser, where tests wil be executed (_default value: <code>1920x1080</code>_).
 > 
 > <code>THREADS</code> - this setting gives possibility to launch specified number of tests in parallel.
-> 
-> <code>BROWSER_MOBILE</code> - mobile browser, where tests will be executed (_default value: null)
-> NOTE: this setting isn't used in current project, because mobile testing is the topic of future lessons
 
 ___
-## <img width="4%" title="Jenkins" src="images/logo/Jenkins.svg"> Tests launch from [Jenkins](https://jenkins.autotests.cloud/job/c11-lifetesting-mangotrade-tests-tda/)
+## <img width="4%" title="Jenkins" src="images/logo/Jenkins.svg"> Tests launch from [Jenkins](https://jenkins.autotests.cloud/job/c11-lifetesting-mangotrade-tests-tda-diploma/)
 *For launch remote tests it's necessary to click the option <code><strong>*Собрать с параметрами*</strong></code>, then to fill build settings and to click the button <code><strong>*Собрать*</strong></code>.*
 <p align="center">
-  <img src="images/screens/Jenkins.png" alt="job" width="800">
+  <img src="images/screens/jenkins_diploma1.png.png" alt="job" width="800">
 </p>
 
 *After tests execution, in the panel <code><strong>*История сборок*</strong></code> in the row with build number
@@ -108,7 +117,7 @@ html-report in Allure Report.*
 html-report in Allure TestOps.*
 
 <p align="center">
-  <img src="images/screens/Jenkins2.png" alt="job" width="1000">
+  <img src="images/screens/jenkins_diploma2.pngenkins.png" alt="job" width="1000">
 </p>
 
 ## <img width="4%" title="Allure Report" src="images/logo/Allure_Report.svg"> Tests results report in [Allure Report](https://jenkins.autotests.cloud/job/c11-lifetesting-mangotrade-tests-tda/50/allure/)
