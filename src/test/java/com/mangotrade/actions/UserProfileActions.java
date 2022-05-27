@@ -59,6 +59,7 @@ public class UserProfileActions {
 
     @Step("Check user last name")
     public boolean checkUserLastName(Response userProfile, String lastName) {
+
         /*userProfile
                 .then()
                 .body("result.last_name", is(lastName));*/
