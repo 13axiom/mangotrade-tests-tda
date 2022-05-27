@@ -160,7 +160,7 @@ html-report in Allure TestOps.*
 ## <img width="4%" title="Jira" src="images/logo/Jira.svg"> [Jira](https://jira.autotests.cloud/browse/AUTO-810) integration
 
 <p align="center">
-  <img src="images/screens/jira.png" alt="jira" width="1000">
+  <img src="images/screens/jira_diploma.png" alt="jira" width="1000">
 </p>
 
 ## <img width="4%" title="Telegram" src="images/logo/Telegram.svg"> Telegram notifications using a bot
@@ -175,7 +175,4 @@ html-report in Allure TestOps.*
 
 > A video is attached to each test in the report.
 
-
-
-https://user-images.githubusercontent.com/84909251/160829280-81dffde8-a9ad-4b75-9e2a-2a19c6019a74.mp4
 
