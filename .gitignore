@@ -39,6 +39,8 @@ target/
 /gradlew.bat
 .todo
 *.properties
+!remote_example.properties
+!user_data_example.properties
 /src/test/java/cloud/autotests/docs/
 src/test/java/com/mangotrade/tests/exampleforuiplusapi/
 src/test/java/com/mangotrade/config/exampleforuiplusapi/
