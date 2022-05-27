@@ -78,7 +78,7 @@ ${TASK}
 >ui - ui tests
 > 
 > rest_api - api tests
-
+>
 > <code>-Dproperties=remote</code> - config file, which will be created when tests launch will be started.
 
 ### :clipboard:	 Config file structure
