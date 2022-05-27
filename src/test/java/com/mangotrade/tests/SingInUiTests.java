@@ -22,11 +22,12 @@ public class SingInUiTests extends TestBaseUI {
     SingInPage singInPage = new SingInPage();
 
     @Test
+    @AllureId("10392")
     @Owner("DmitriyTQC")
     @Severity(SeverityLevel.CRITICAL)
     @Tags({@Tag("possitive"), @Tag("login"), @Tag("ui"), @Tag("singin")})
-    @Feature("Login page functional tests")
-    @DisplayName("Success login to account")
+    @Feature("Sing In page tests -> UI")
+    @DisplayName("Success sing in to account")
     void successLogin() {
 
         singInPage.openSingInPage()
