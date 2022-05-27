@@ -11,10 +11,6 @@ import org.aeonbits.owner.Config;
 })
 public interface ProjectConfig extends Config {
 
-    @Key("browserMobileView")
-    @DefaultValue("")
-    String browserMobileView();
-
     @Key("remoteDriverUrl")
     @DefaultValue("")
     String remoteDriverUrl();
