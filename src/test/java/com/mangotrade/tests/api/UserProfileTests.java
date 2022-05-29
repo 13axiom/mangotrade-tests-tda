@@ -13,7 +13,7 @@ import org.junit.jupiter.api.Test;
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 
 
-public class UserProfileApiTests {
+public class UserProfileTests {
 
     @Test
     @AllureId("10251")
