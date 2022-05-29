@@ -12,7 +12,7 @@ import static java.lang.Thread.sleep;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
-public class SingInUiTests extends TestBase {
+public class SingInTests extends TestBase {
     SingInPage singInPage = new SingInPage();
 
     @Test

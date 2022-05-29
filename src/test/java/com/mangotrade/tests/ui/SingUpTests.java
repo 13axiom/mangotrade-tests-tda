@@ -8,7 +8,7 @@ import com.mangotrade.pages.SingUpPage;
 import java.util.Locale;
 
 
-public class SingUpUiTests extends TestBase {
+public class SingUpTests extends TestBase {
     SingUpPage singUpPage = new SingUpPage();
     Faker faker = new Faker(new Locale("en"));
 
