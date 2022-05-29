@@ -1,10 +1,9 @@
 package com.mangotrade.tests.ui;
 
 import com.mangotrade.config.Project;
-import com.mangotrade.tests.ui.TestBase;
 import io.qameta.allure.*;
 import org.junit.jupiter.api.*;
-import pages.SingInPage;
+import com.mangotrade.pages.SingInPage;
 
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;

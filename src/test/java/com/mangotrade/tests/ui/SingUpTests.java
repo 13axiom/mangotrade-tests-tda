@@ -1,10 +1,9 @@
 package com.mangotrade.tests.ui;
 
 import com.github.javafaker.Faker;
-import com.mangotrade.tests.ui.TestBase;
 import io.qameta.allure.*;
 import org.junit.jupiter.api.*;
-import pages.SingUpPage;
+import com.mangotrade.pages.SingUpPage;
 
 import java.util.Locale;
 

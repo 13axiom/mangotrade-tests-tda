@@ -3,7 +3,7 @@ package com.mangotrade.actions;
 import com.mangotrade.config.Project;
 import io.qameta.allure.Step;
 import io.restassured.response.Response;
-import models.LoginData;
+import com.mangotrade.models.LoginData;
 
 import static com.mangotrade.tests.api.Specs.request;
 import static io.restassured.RestAssured.given;

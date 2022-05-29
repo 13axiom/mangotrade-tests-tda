@@ -1,4 +1,4 @@
-package pages;
+package com.mangotrade.pages;
 
 import com.codeborne.selenide.SelenideElement;
 import com.mangotrade.helpers.DriverUtils;
