@@ -4,6 +4,7 @@ import io.qameta.allure.Step;
 import io.qameta.allure.restassured.AllureRestAssured;
 import io.restassured.response.Response;
 
+import static com.mangotrade.tests.api.Specs.baseUriSpec;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.is;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -13,13 +14,10 @@ public class UserProfileActions {
     @Step("Get user profile")
     public Response getUserProfile(String authorizationCookie) {
         Response response = given()
-                .filter(new AllureRestAssured())
+                .spec(baseUriSpec)
                 .cookie("ssid", authorizationCookie)
-                .header("Connection", "keep-alive")
-                .log().uri()
-                .log().body()
                 .when()
-                .get("https://trade.mangotrade.com/api/getprofile")
+                .get("/api/getprofile")
                 .then()
                 .log().status()
                 .log().body()

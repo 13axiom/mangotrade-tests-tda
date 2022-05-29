@@ -13,6 +13,15 @@ import static org.hamcrest.core.IsNull.notNullValue;
 
 public class Specs {
 
+    public static RequestSpecification baseUriSpec = with()
+            .filter(withCustomTemplates())
+            .baseUri(Project.config.restUrl())
+            .cookie("platform=90; " +
+                    "lang=en_US; ")
+            .header("Connection", "keep-alive")
+            .log().uri()
+            .log().body()
+            .contentType(ContentType.JSON);
 
     public static RequestSpecification request = with()
             .filter(withCustomTemplates())
