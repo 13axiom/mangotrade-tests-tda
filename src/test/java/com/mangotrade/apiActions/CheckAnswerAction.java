@@ -1,4 +1,4 @@
-package com.mangotrade.actions;
+package com.mangotrade.apiActions;
 
 import io.qameta.allure.Step;
 import io.restassured.response.Response;

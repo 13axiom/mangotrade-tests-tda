@@ -1,7 +1,7 @@
 package com.mangotrade.tests.api;
 
-import com.mangotrade.actions.AuthActions;
-import com.mangotrade.actions.UserProfileActions;
+import com.mangotrade.apiActions.AuthActions;
+import com.mangotrade.apiActions.UserProfileActions;
 import com.mangotrade.config.Project;
 import io.qameta.allure.*;
 import io.restassured.response.Response;
@@ -13,7 +13,7 @@ import org.junit.jupiter.api.Test;
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 
 
-public class UserProfileTests {
+public class UserProfileApiTests {
 
     @Test
     @AllureId("10251")

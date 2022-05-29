@@ -1,7 +1,7 @@
 package com.mangotrade.tests.api;
 
-import com.mangotrade.actions.AuthActions;
-import com.mangotrade.actions.CheckAnswerAction;
+import com.mangotrade.apiActions.AuthActions;
+import com.mangotrade.apiActions.CheckAnswerAction;
 import com.mangotrade.config.Project;
 import io.qameta.allure.*;
 import io.restassured.response.Response;

@@ -1,4 +1,4 @@
-package com.mangotrade.actions;
+package com.mangotrade.apiActions;
 
 import com.mangotrade.config.Project;
 import io.qameta.allure.Step;
