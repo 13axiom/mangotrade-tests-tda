@@ -1,6 +1,7 @@
-package com.mangotrade.tests;
+package com.mangotrade.tests.ui;
 
 import com.github.javafaker.Faker;
+import com.mangotrade.tests.ui.TestBase;
 import io.qameta.allure.*;
 import org.junit.jupiter.api.*;
 import pages.SingUpPage;
@@ -8,7 +9,7 @@ import pages.SingUpPage;
 import java.util.Locale;
 
 
-public class SingUpTests extends TestBaseUI {
+public class SingUpTests extends TestBase {
     SingUpPage singUpPage = new SingUpPage();
     Faker faker = new Faker(new Locale("en"));
 

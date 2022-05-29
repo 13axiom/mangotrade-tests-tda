@@ -1,4 +1,4 @@
-package com.mangotrade.tests;
+package com.mangotrade.tests.api;
 
 import com.mangotrade.config.Project;
 import io.restassured.builder.ResponseSpecBuilder;

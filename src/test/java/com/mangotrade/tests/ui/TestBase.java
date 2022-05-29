@@ -1,4 +1,4 @@
-package com.mangotrade.tests;
+package com.mangotrade.tests.ui;
 
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.logevents.SelenideLogger;
@@ -14,7 +14,7 @@ import org.junit.jupiter.api.extension.ExtendWith;
 
 
 @ExtendWith({AllureJunit5.class})
-public class TestBaseUI {
+public class TestBase {
     @BeforeAll
     static void setUp() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());

@@ -3,8 +3,8 @@ package com.mangotrade.actions;
 import io.qameta.allure.Step;
 import io.restassured.response.Response;
 
-import static com.mangotrade.tests.Specs.failedResponseSpec;
-import static com.mangotrade.tests.Specs.successResponseSpec;
+import static com.mangotrade.tests.api.Specs.failedResponseSpec;
+import static com.mangotrade.tests.api.Specs.successResponseSpec;
 
 public class CheckAnswerAction {
     @Step("Actual Result: Successful answer")

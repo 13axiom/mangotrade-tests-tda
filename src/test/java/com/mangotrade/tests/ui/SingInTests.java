@@ -1,15 +1,10 @@
-package com.mangotrade.tests;
+package com.mangotrade.tests.ui;
 
-import com.github.javafaker.Faker;
 import com.mangotrade.config.Project;
-import com.mangotrade.helpers.DriverUtils;
+import com.mangotrade.tests.ui.TestBase;
 import io.qameta.allure.*;
-import models.LoginData;
 import org.junit.jupiter.api.*;
 import pages.SingInPage;
-import pages.SingUpPage;
-
-import java.util.Locale;
 
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
@@ -18,7 +13,7 @@ import static java.lang.Thread.sleep;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
-public class SingInUiTests extends TestBaseUI {
+public class SingInTests extends TestBase {
     SingInPage singInPage = new SingInPage();
 
     @Test

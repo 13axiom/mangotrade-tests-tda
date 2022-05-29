@@ -5,7 +5,7 @@ import io.qameta.allure.Step;
 import io.restassured.response.Response;
 import models.LoginData;
 
-import static com.mangotrade.tests.Specs.request;
+import static com.mangotrade.tests.api.Specs.request;
 import static io.restassured.RestAssured.given;
 
 public class AuthActions {
